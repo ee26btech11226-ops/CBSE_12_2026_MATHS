@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  9 NOV 2026 07:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  9 NOV 2026 08:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1494,7 +1494,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ]) (./chapters/cbse-2026.tex
 ! Undefined control sequence.
 l.1 \noindentSection
-                     A (Questions 1--20, 1 mark each)
+                     Section A (Questions 1--20, 1 mark each)
 ? 
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
@@ -1582,83 +1582,68 @@ Package pdftex.def Info: figs/Ant.pdf  used on input line 222.
 (pdftex.def)             Requested size: 218.5194pt x 182.10262pt.
  [8] [9 <./figs/Ant.pdf>]
 ! Undefined control sequence.
-l.301 \noindentSection
-                       B (Questions 21--25, 2 marks each)
+l.302 \noindentSection
+                       Section B (Questions 21--25, 2 marks each)
 ? 
-[10] [11]
+[10]
 ! Undefined control sequence.
-l.387 \noindentSection
-                       C (Questions 26--31, 3 marks each)
+l.388 \noindentSection
+                       Section C (Questions 26--31, 3 marks each)
 ? 
-[12] [13]
+[11] [12]
 ! Undefined control sequence.
-l.495 \noindentSection
-                       D (Questions 32--35, 5 marks each)
+l.496 \noindentSection
+                       Section D (Questions 32--35, 5 marks each)
 ? 
-[14]
-<figs/Ellipse.png, id=382, 361.35pt x 433.62pt>
+[13] [14]
+<figs/Ellipse.png, id=384, 361.35pt x 433.62pt>
 File: figs/Ellipse.png Graphic file (type png)
 <use figs/Ellipse.png>
-Package pdftex.def Info: figs/Ellipse.png  used on input line 574.
+Package pdftex.def Info: figs/Ellipse.png  used on input line 575.
 (pdftex.def)             Requested size: 182.09764pt x 218.51653pt.
  [15] [16 <./figs/Ellipse.png>]
 ! Undefined control sequence.
-l.612 \noindentSection
+l.613 \noindentSection
                        E (Questions 36--38, 4 marks each)
 ? 
 [17] (./figs/Tumbler.tex)
-<figs/Tumbler_V.png, id=431, 433.62pt x 289.08pt>
+<figs/Tumbler_V.png, id=432, 433.62pt x 289.08pt>
 File: figs/Tumbler_V.png Graphic file (type png)
 <use figs/Tumbler_V.png>
-Package pdftex.def Info: figs/Tumbler_V.png  used on input line 683.
+Package pdftex.def Info: figs/Tumbler_V.png  used on input line 684.
 (pdftex.def)             Requested size: 218.5194pt x 145.68208pt.
- [18]) [19 <./figs/Tumbler_V.png>]
-
-! LaTeX Error: \begin{enumerate} on input line 2 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.104 \end{document}
-                    
-? 
-(./main.aux)
+ [18]) [19 <./figs/Tumbler_V.png>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BF5C6A660FD79632E851D9FC3A32CDD3;348.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 2 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
  54558 strings out of 467533
- 1307153 string characters out of 5422138
- 1948244 words of memory out of 5000000
+ 1307107 string characters out of 5422138
+ 1949244 words of memory out of 5000000
  82453 multiletter control sequences out of 15000+600000
  662449 words of font info for 109 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,20n,118p,1194b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tfrup
-ee/tfrupee.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (19 pages, 816173 bytes).
+ 109i,20n,118p,1194b,1438s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tfrupee/tfrupee.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (19 pages, 816297 bytes).
 PDF statistics:
  578 PDF objects out of 1000 (max. 8388607)
  468 compressed objects within 5 object streams
