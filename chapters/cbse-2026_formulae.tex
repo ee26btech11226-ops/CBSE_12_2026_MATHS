@@ -1,0 +1,103 @@
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
+\item For a non-singular $n \times n$ matrix $\vec{A}$,
+\begin{align}
+	\vec{A}\,\text{adj}\,\vec{A} &= \mydet{\vec{A}}\vec{I}, \quad
+	\vec{A}^{-1} = \frac{\text{adj}\,\vec{A}}{\mydet{\vec{A}}}
+	\label{eq:EE26BTECH11202-adj}
+	\\
+	\mydet{\text{adj}\,\vec{A}} &= \mydet{\vec{A}}^{n-1}
+	\label{eq:EE26BTECH11202-adj-det}
+\end{align}
+\solution
+Taking the determinant on both sides of the first equation in
+\eqref{eq:EE26BTECH11202-adj},
+\begin{align}
+	\mydet{\vec{A}}\mydet{\text{adj}\,\vec{A}} = \mydet{\mydet{\vec{A}}\vec{I}} = \mydet{\vec{A}}^{n}
+\end{align}
+which yields \eqref{eq:EE26BTECH11202-adj-det} when $\mydet{\vec{A}} \ne 0$.
+\item The linear system $\vec{A}\vec{x} = \vec{b}$ with $\mydet{\vec{A}} \ne 0$ has the unique solution
+\begin{align}
+	\vec{x} = \vec{A}^{-1}\vec{b}
+	\label{eq:EE26BTECH11202-linsys}
+\end{align}
+\item The area of the triangle with vertices $\vec{A}, \vec{B}, \vec{C}$ is
+\begin{align}
+	\frac{1}{2}\norm{\brak{\vec{B}-\vec{A}}\times\brak{\vec{C}-\vec{A}}}
+	\label{eq:EE26BTECH11202-area}
+\end{align}
+In $\mathbb{R}^2$ this reduces to $\frac{1}{2}\abs{\mydet{\vec{B}-\vec{A} & \vec{C}-\vec{A}}}$ and the points are collinear if and only if
+\begin{align}
+	\text{rank}\myvec{\vec{B}-\vec{A} & \vec{C}-\vec{A}} = 1
+	\iff
+	\mydet{\vec{B}-\vec{A} & \vec{C}-\vec{A}} = 0
+	\label{eq:EE26BTECH11202-collinear}
+\end{align}
+\item For any vectors $\vec{a}, \vec{b}$,
+\begin{align}
+	\norm{\vec{a}-\vec{b}}^2 &= \norm{\vec{a}}^2 + \norm{\vec{b}}^2 - 2\vec{a}^{\top}\vec{b}
+	\label{eq:EE26BTECH11202-norm-id}
+	\\
+	\vec{a}^{\top}\vec{b} &= 0 \iff \vec{a} \perp \vec{b}
+	\label{eq:EE26BTECH11202-ortho}
+\end{align}
+\item The angle $\theta$ between the lines $\vec{x} = \vec{A}_1 + \lambda\vec{m}_1$ and $\vec{x} = \vec{A}_2 + \mu\vec{m}_2$ is given by
+\begin{align}
+	\cos\theta = \frac{\vec{m}_1^{\top}\vec{m}_2}{\norm{\vec{m}_1}\norm{\vec{m}_2}}
+	\label{eq:EE26BTECH11202-angle}
+\end{align}
+\item The foot of the perpendicular from $\vec{Q}$ to the line $\vec{x} = \vec{P}_0 + \lambda\vec{m}$ is $\vec{F} = \vec{P}_0 + \lambda_0\vec{m}$, where
+\begin{align}
+	\lambda_0 = \frac{\vec{m}^{\top}\brak{\vec{Q}-\vec{P}_0}}{\vec{m}^{\top}\vec{m}}
+	\label{eq:EE26BTECH11202-foot}
+\end{align}
+\solution
+$\vec{F}-\vec{Q}$ is orthogonal to $\vec{m}$. From \eqref{eq:EE26BTECH11202-ortho},
+\begin{align}
+	\vec{m}^{\top}\brak{\vec{P}_0 + \lambda_0\vec{m} - \vec{Q}} = 0
+	\implies \lambda_0 = \frac{\vec{m}^{\top}\brak{\vec{Q}-\vec{P}_0}}{\vec{m}^{\top}\vec{m}}
+\end{align}
+\item The shortest distance between the skew lines $\vec{x} = \vec{A}_1 + \lambda\vec{m}_1$ and $\vec{x} = \vec{A}_2 + \mu\vec{m}_2$ is
+\begin{align}
+	d = \frac{\abs{\brak{\vec{A}_2-\vec{A}_1}^{\top}\brak{\vec{m}_1\times\vec{m}_2}}}{\norm{\vec{m}_1\times\vec{m}_2}}
+	\label{eq:EE26BTECH11202-skew}
+\end{align}
+\item For events $A, B$ and a partition $A_1, A_2, A_3$ of the sample space with $\pr{A_i}=p_i$, $\pr{E\vert A_i}=q_i$,
+\begin{align}
+	\pr{A\vert B} &= \frac{\pr{AB}}{\pr{B}}, \quad \pr{A+B} = \pr{A}+\pr{B}-\pr{AB}
+	\label{eq:EE26BTECH11202-cond}
+	\\
+	\pr{E} &= \sum_{i=1}^{3} p_i q_i = \vec{p}^{\top}\vec{q}
+	\label{eq:EE26BTECH11202-total}
+	\\
+	\pr{A_j\vert E} &= \frac{p_j q_j}{\vec{p}^{\top}\vec{q}}
+	\label{eq:EE26BTECH11202-bayes}
+\end{align}
+and $A, B$ are independent if and only if $\pr{AB} = \pr{A}\pr{B}$.
+\item The conic $\vec{x}^{\top}\vec{V}\vec{x} = c$, with $\vec{V}$ symmetric positive definite having eigenvalues $\lambda_1, \lambda_2$, is an ellipse with semi-axes $\sqrt{c/\lambda_1}$ and $\sqrt{c/\lambda_2}$. Its area is
+\begin{align}
+	\frac{\pi c}{\sqrt{\mydet{\vec{V}}}}
+	\label{eq:EE26BTECH11202-ellipse}
+\end{align}
+\item A linear programming problem is
+\begin{align}
+	\max_{\vec{x}} \; \vec{c}^{\top}\vec{x} \quad \text{s.t.} \quad
+	\vec{A}\vec{x} \preceq \vec{b}, \; \vec{x} \succeq \vec{0}
+	\label{eq:EE26BTECH11202-lpp}
+\end{align}
+and, if the feasible region is a bounded polygon, the optimum is attained at a corner point. If two corner points give the same optimum, so does every point on the segment joining them.
+\item Standard integrals,
+\begin{align}
+	\int \frac{dx}{\sqrt{x^2+a^2}} &= \log\abs{x+\sqrt{x^2+a^2}} + C
+	\label{eq:EE26BTECH11202-int-root}
+	\\
+	\int \sec x\, dx &= \log\abs{\sec x + \tan x} + C
+	\label{eq:EE26BTECH11202-int-sec}
+\end{align}
+\item A differentiable $f$ is increasing on an interval if $f^{\prime}\brak{x} > 0$ there. For $y=u^{v}$,
+\begin{align}
+	\diff{y}{x} = y\,\diff{}{x}\brak{v\log u}
+	\label{eq:EE26BTECH11202-logdiff}
+\end{align}
+\item For finite sets $A, B$ with $\abs{A}=m$, $\abs{B}=n$,
+the number of relations from $A$ to $B$ is $2^{mn}$. A bijection $A \to B$ exists only if $m = n$.
+\end{enumerate}

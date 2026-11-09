@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=1.1]
+    \draw[thick] (-1.2, 0) -- (-1.2, 3);
+    \draw[thick] (1.2, 0) -- (1.2, 3);
+    \draw[thick] (0, 3) ellipse (1.2 and 0.35);
+    \draw[thick] (-1.2, 0) arc (180:360:1.2 and 0.35);
+    \draw[dashed] (-1.2, 0) arc (180:0:1.2 and 0.35);
+    \fill (0, 0) circle (1pt) node[below] {$O$};
+    \draw[thick] (0, 0) -- (1.2, 0) node[midway, above] {$r$};
+    \draw[<->] (1.7, 0) -- (1.7, 3) node[midway, right] {$h$};
+    \node[left] at (-1.4, 1.5) {Tumbler};
+\end{tikzpicture}
