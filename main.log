@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  9 NOV 2026 07:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  9 NOV 2026 07:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1492,6 +1492,11 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 (./chapters/cbse-2026_formulae.tex [4
 
 ]) (./chapters/cbse-2026.tex
+! Undefined control sequence.
+l.1 \noindentSection
+                     A (Questions 1--20, 1 mark each)
+? 
+
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -1575,14 +1580,33 @@ File: figs/Ant.pdf Graphic file (type pdf)
 <use figs/Ant.pdf>
 Package pdftex.def Info: figs/Ant.pdf  used on input line 222.
 (pdftex.def)             Requested size: 218.5194pt x 182.10262pt.
- [8] [9 <./figs/Ant.pdf>] [10] [11] [12] [13] [14]
+ [8] [9 <./figs/Ant.pdf>]
+! Undefined control sequence.
+l.301 \noindentSection
+                       B (Questions 21--25, 2 marks each)
+? 
+[10] [11]
+! Undefined control sequence.
+l.387 \noindentSection
+                       C (Questions 26--31, 3 marks each)
+? 
+[12] [13]
+! Undefined control sequence.
+l.495 \noindentSection
+                       D (Questions 32--35, 5 marks each)
+? 
+[14]
 <figs/Ellipse.png, id=382, 361.35pt x 433.62pt>
 File: figs/Ellipse.png Graphic file (type png)
 <use figs/Ellipse.png>
 Package pdftex.def Info: figs/Ellipse.png  used on input line 574.
 (pdftex.def)             Requested size: 182.09764pt x 218.51653pt.
- [15]
-[16 <./figs/Ellipse.png>] [17] (./figs/Tumbler.tex)
+ [15] [16 <./figs/Ellipse.png>]
+! Undefined control sequence.
+l.612 \noindentSection
+                       E (Questions 36--38, 4 marks each)
+? 
+[17] (./figs/Tumbler.tex)
 <figs/Tumbler_V.png, id=431, 433.62pt x 289.08pt>
 File: figs/Tumbler_V.png Graphic file (type png)
 <use figs/Tumbler_V.png>
@@ -1604,10 +1628,6 @@ l.104 \end{document}
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BF5C6A660FD79632E851D9FC3A32CDD3;348.
  )
@@ -1622,7 +1642,7 @@ Here is how much of TeX's memory you used:
  82453 multiletter control sequences out of 15000+600000
  662449 words of font info for 109 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,20n,118p,1194b,1601s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,20n,118p,1194b,1603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
@@ -1638,7 +1658,7 @@ onts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tfrup
 ee/tfrupee.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (19 pages, 818320 bytes).
+Output written on main.pdf (19 pages, 816173 bytes).
 PDF statistics:
  578 PDF objects out of 1000 (max. 8388607)
  468 compressed objects within 5 object streams

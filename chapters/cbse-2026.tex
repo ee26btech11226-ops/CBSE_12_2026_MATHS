@@ -1,4 +1,4 @@
-\noindent\textbf{Section A} (Questions 1--20, 1 mark each)
+\noindentSection A (Questions 1--20, 1 mark each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
 \item If the matrix $\vec{A} = \myvec{-p & q \\ r & p}$ is such that $\vec{A}^2 = \vec{I}$, then
 \begin{enumerate}[label=(\Alph*)]
@@ -42,7 +42,7 @@ Since $\vec{A}^2 = \vec{A}$,
 \end{align}
 Option (B).
 
-\item For the inverse trigonometric functions, which of the following principal value branches is \textbf{not} correctly defined?
+\item For the inverse trigonometric functions, which of the following principal value branches is not correctly defined?
 \begin{enumerate}[label=(\Alph*)]
 	\item $\tan^{-1}: \mathbb{R} \to \brak{-\frac{\pi}{2}, \frac{\pi}{2}}$
 	\item $\sec^{-1}: \mathbb{R}-\brak{-1,1} \to \sbrak{0,\pi} - \cbrak{\frac{\pi}{2}}$
@@ -72,7 +72,7 @@ The other three branches are the standard ones. Option (D).
 \end{align}
 Option (C).
 
-\item If $\vec{A}$ is non-singular, which of the following is \textbf{not} true?
+\item If $\vec{A}$ is non-singular, which of the following is not true?
 \begin{enumerate}[label=(\Alph*)]
 	\begin{multicols}{2}
 	\item $\text{adj}\,\vec{A}$ is singular
@@ -298,7 +298,7 @@ The code in Problem~31 verifies this.
 
 
 \vspace{2mm}
-\noindent\textbf{Section B} (Questions 21--25, 2 marks each)
+\noindentSection B (Questions 21--25, 2 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=21]
 \item Evaluate $\sin\sbrak{\tan^{-1}\brak{\tan\frac{3\pi}{4}}}$.
 \par\solution
@@ -309,19 +309,19 @@ $\tan\frac{3\pi}{4} = -1$ and the principal value of $\tan^{-1}$ lies in $\brak{
 \end{align}
 
 \item 
-\textbf{(a)} Differentiate $x^x$ with respect to $x\log x$.
+(a) Differentiate $x^x$ with respect to $x\log x$.
 
-\textbf{OR}
+OR
 
-\textbf{(b)} If $y = P\cos ux + Q\sin ux$, show that $\diff{^2y}{x^2} + u^2y = 0$.
+(b) If $y = P\cos ux + Q\sin ux$, show that $\diff{^2y}{x^2} + u^2y = 0$.
 \par\solution
-\textbf{(a)} Let $p = x^x$ and $q = x\log x$ for $x > 0$. Then $\log p = x\log x = q$, and from \eqref{eq:EE26BTECH11202-logdiff},
+(a) Let $p = x^x$ and $q = x\log x$ for $x > 0$. Then $\log p = x\log x = q$, and from \eqref{eq:EE26BTECH11202-logdiff},
 \begin{align}
 	\diff{p}{x} &= x^x\brak{1+\log x}, \quad \diff{q}{x} = 1 + \log x
 	\\
 	\implies \diff{p}{q} &= \frac{dp/dx}{dq/dx} = x^x
 \end{align}
-\textbf{(b)} Differentiating twice,
+(b) Differentiating twice,
 \begin{align}
 	\diff{y}{x} &= -Pu\sin ux + Qu\cos ux
 	\\
@@ -340,18 +340,18 @@ $\tan\frac{3\pi}{4} = -1$ and the principal value of $\tan^{-1}$ lies in $\brak{
 Since $f^{\prime}\brak{x} > 0$, $f$ is increasing on $\brak{-\infty,-1}$ and on $\brak{-1,\infty}$, i.e., for all $x \in \mathbb{R}-\cbrak{-1}$.
 
 \item 
-\textbf{(a)} Three honey bees fly along the vectors $\vec{a} = \myvec{2 \\ -3 \\ 1}$, $\vec{b} = \myvec{0 \\ 4 \\ -2}$ and $\vec{c} = \myvec{3 \\ 0 \\ 2}$. Find $\lambda$ such that the path for $\vec{a}+\lambda\vec{b}$ is perpendicular to $\vec{c}$.
+(a) Three honey bees fly along the vectors $\vec{a} = \myvec{2 \\ -3 \\ 1}$, $\vec{b} = \myvec{0 \\ 4 \\ -2}$ and $\vec{c} = \myvec{3 \\ 0 \\ 2}$. Find $\lambda$ such that the path for $\vec{a}+\lambda\vec{b}$ is perpendicular to $\vec{c}$.
 
-\textbf{OR}
+OR
 
-\textbf{(b)} If $\vec{A}, \vec{B}, \vec{C}$ are non-collinear points with $\vec{AB} = \myvec{1 \\ 2 \\ -1}$ and $\vec{AC} = \myvec{2 \\ -3 \\ 0}$, find the area of $\triangle ABC$.
+(b) If $\vec{A}, \vec{B}, \vec{C}$ are non-collinear points with $\vec{AB} = \myvec{1 \\ 2 \\ -1}$ and $\vec{AC} = \myvec{2 \\ -3 \\ 0}$, find the area of $\triangle ABC$.
 \par\solution
-\textbf{(a)} From \eqref{eq:EE26BTECH11202-ortho},
+(a) From \eqref{eq:EE26BTECH11202-ortho},
 \begin{align}
 	\brak{\vec{a}+\lambda\vec{b}}^{\top}\vec{c} = \vec{a}^{\top}\vec{c} + \lambda\vec{b}^{\top}\vec{c} = 8 - 4\lambda = 0
 	\implies \lambda = 2
 \end{align}
-\textbf{(b)} 
+(b) 
 \begin{align}
 	\vec{AB}\times\vec{AC} = \myvec{\brak{2}\brak{0}-\brak{-1}\brak{-3} \\ \brak{-1}\brak{2}-\brak{1}\brak{0} \\ \brak{1}\brak{-3}-\brak{2}\brak{2}}
 	= \myvec{-3 \\ -2 \\ -7}
@@ -384,7 +384,7 @@ The following code verifies this and Problems~7, 16, 17, 24, 30 and 35.
 \end{enumerate}
 
 \vspace{2mm}
-\noindent\textbf{Section C} (Questions 26--31, 3 marks each)
+\noindentSection C (Questions 26--31, 3 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=26]
 \item A spherical balloon loses its volume due to escape of air in such a way that the decrease of volume at any instant is proportional to its surface area. Show that the radius is decreasing at a constant rate.
 \par\solution
@@ -397,13 +397,13 @@ Let $V = \frac{4}{3}\pi r^3$ and $S = 4\pi r^2$. For some constant $k > 0$,
 which is a constant. Hence the radius decreases at a constant rate $k$.
 
 \item 
-\textbf{(a)} Find $\displaystyle\int\frac{x-\sin x}{1-\cos x}\,dx$.
+(a) Find $\displaystyle\int\frac{x-\sin x}{1-\cos x}\,dx$.
 
-\textbf{OR}
+OR
 
-\textbf{(b)} Evaluate $\displaystyle\int_0^2\frac{1}{\sqrt{x^2+2x+3}}\,dx$.
+(b) Evaluate $\displaystyle\int_0^2\frac{1}{\sqrt{x^2+2x+3}}\,dx$.
 \par\solution
-\textbf{(a)} Using $1 - \cos x = 2\sin^2\frac{x}{2}$ and $\sin x = 2\sin\frac{x}{2}\cos\frac{x}{2}$,
+(a) Using $1 - \cos x = 2\sin^2\frac{x}{2}$ and $\sin x = 2\sin\frac{x}{2}\cos\frac{x}{2}$,
 \begin{align}
 	\frac{x-\sin x}{1-\cos x} = \frac{x}{2}\text{cosec}^2\frac{x}{2} - \cot\frac{x}{2}
 \end{align}
@@ -415,7 +415,7 @@ The $\int\cot\frac{x}{2}\,dx$ terms cancel, so
 \begin{align}
 	\int\frac{x-\sin x}{1-\cos x}\,dx = -x\cot\frac{x}{2} + C
 \end{align}
-\textbf{(b)} Since $x^2+2x+3 = \brak{x+1}^2 + 2$, from \eqref{eq:EE26BTECH11202-int-root} with $a = \sqrt{2}$,
+(b) Since $x^2+2x+3 = \brak{x+1}^2 + 2$, from \eqref{eq:EE26BTECH11202-int-root} with $a = \sqrt{2}$,
 \begin{align}
 	\int_0^2\frac{dx}{\sqrt{\brak{x+1}^2+2}}
 	&= \sbrak{\log\abs{\brak{x+1}+\sqrt{x^2+2x+3}}}_0^2
@@ -441,18 +441,18 @@ This is linear with integrating factor $e^{-\int dy/y} = \frac{1}{y}$. Hence
 
 
 \item 
-\textbf{(a)} Three toys $A$, $B$ and $C$ are placed on a straight line. If their position vectors are $\myvec{55 \\ -2}$, $\myvec{5 \\ 8}$ and $\myvec{a \\ -52}$ respectively, find $a$.
+(a) Three toys $A$, $B$ and $C$ are placed on a straight line. If their position vectors are $\myvec{55 \\ -2}$, $\myvec{5 \\ 8}$ and $\myvec{a \\ -52}$ respectively, find $a$.
 
-\textbf{OR}
+OR
 
-\textbf{(b)} If $\vec{a}, \vec{b}, \vec{c}$ are unit vectors, prove that $\norm{\vec{a}-\vec{b}}^2 + \norm{\vec{b}-\vec{c}}^2 + \norm{\vec{c}-\vec{a}}^2 \le 9$.
+(b) If $\vec{a}, \vec{b}, \vec{c}$ are unit vectors, prove that $\norm{\vec{a}-\vec{b}}^2 + \norm{\vec{b}-\vec{c}}^2 + \norm{\vec{c}-\vec{a}}^2 \le 9$.
 \par\solution
-\textbf{(a)} From \eqref{eq:EE26BTECH11202-collinear},
+(a) From \eqref{eq:EE26BTECH11202-collinear},
 \begin{align}
 	\mydet{\vec{B}-\vec{A} & \vec{C}-\vec{A}} = \mydet{-50 & a-55 \\ 10 & -50}
 	= 2500 - 10\brak{a-55} = 0 \implies a = 305
 \end{align}
-\textbf{(b)} Let $s = \vec{a}^{\top}\vec{b} + \vec{b}^{\top}\vec{c} + \vec{c}^{\top}\vec{a}$. Since the vectors are unit vectors, from \eqref{eq:EE26BTECH11202-norm-id},
+(b) Let $s = \vec{a}^{\top}\vec{b} + \vec{b}^{\top}\vec{c} + \vec{c}^{\top}\vec{a}$. Since the vectors are unit vectors, from \eqref{eq:EE26BTECH11202-norm-id},
 \begin{align}
 	\norm{\vec{a}-\vec{b}}^2 + \norm{\vec{b}-\vec{c}}^2 + \norm{\vec{c}-\vec{a}}^2 = 6 - 2s
 \end{align}
@@ -466,13 +466,13 @@ Therefore
 \end{align}
 
 \item 
-\textbf{(a)} A die is rolled. For the events $A = \cbrak{1,2,5}$, $B = \cbrak{3,5}$, $C = \cbrak{2,3,4,5}$ find (i) $\pr{A\vert C}$ and $\pr{C\vert A}$, (ii) $\pr{AB\vert C}$ and $\pr{A+B\vert C}$.
+(a) A die is rolled. For the events $A = \cbrak{1,2,5}$, $B = \cbrak{3,5}$, $C = \cbrak{2,3,4,5}$ find (i) $\pr{A\vert C}$ and $\pr{C\vert A}$, (ii) $\pr{AB\vert C}$ and $\pr{A+B\vert C}$.
 
-\textbf{OR}
+OR
 
-\textbf{(b)} A box contains cards numbered $1$ to $6$. Two cards are picked one by one with replacement. Let $A$ be the event that the sum of the numbers is $10$ and $B$ the event that the first card is not $4$. Find $\pr{AB}$ and state whether $A$ and $B$ are independent.
+(b) A box contains cards numbered $1$ to $6$. Two cards are picked one by one with replacement. Let $A$ be the event that the sum of the numbers is $10$ and $B$ the event that the first card is not $4$. Find $\pr{AB}$ and state whether $A$ and $B$ are independent.
 \par\solution
-\textbf{(a)} Each outcome has probability $\frac{1}{6}$ and $AC = \cbrak{2,5}$, $AB = \cbrak{5}$, $\brak{A+B}C = \cbrak{2,3,5}$. From \eqref{eq:EE26BTECH11202-cond},
+(a) Each outcome has probability $\frac{1}{6}$ and $AC = \cbrak{2,5}$, $AB = \cbrak{5}$, $\brak{A+B}C = \cbrak{2,3,5}$. From \eqref{eq:EE26BTECH11202-cond},
 \begin{align}
 	\pr{A\vert C} &= \frac{2/6}{4/6} = \frac{1}{2}, \quad
 	\pr{C\vert A} = \frac{2/6}{3/6} = \frac{2}{3}
@@ -480,11 +480,11 @@ Therefore
 	\pr{AB\vert C} &= \frac{1/6}{4/6} = \frac{1}{4}, \quad
 	\pr{A+B\vert C} = \frac{3/6}{4/6} = \frac{3}{4}
 \end{align}
-\textbf{(b)} There are $36$ equally likely outcomes. $A = \cbrak{\brak{4,6},\brak{5,5},\brak{6,4}}$ and $AB = \cbrak{\brak{5,5},\brak{6,4}}$, while $B$ has $5 \times 6 = 30$ outcomes. So
+(b) There are $36$ equally likely outcomes. $A = \cbrak{\brak{4,6},\brak{5,5},\brak{6,4}}$ and $AB = \cbrak{\brak{5,5},\brak{6,4}}$, while $B$ has $5 \times 6 = 30$ outcomes. So
 \begin{align}
 	\pr{A} = \frac{1}{12}, \quad \pr{B} = \frac{5}{6}, \quad \pr{AB} = \frac{2}{36} = \frac{1}{18}
 \end{align}
-Now $\pr{A}\pr{B} = \frac{5}{72} \ne \frac{4}{72} = \pr{AB}$, so $A$ and $B$ are \textbf{not} independent.
+Now $\pr{A}\pr{B} = \frac{5}{72} \ne \frac{4}{72} = \pr{AB}$, so $A$ and $B$ are not independent.
 The following code verifies this and Problems~18 and 37.
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Prob.py}@*)
@@ -492,7 +492,7 @@ The following code verifies this and Problems~18 and 37.
 \end{enumerate}
 
 \vspace{2mm}
-\noindent\textbf{Section D} (Questions 32--35, 5 marks each)
+\noindentSection D (Questions 32--35, 5 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=32]
 \item A man buys fruits. $4$ apples, $3$ oranges and $2$ bananas cost \rupee~$60$; $2$ apples, $4$ oranges and $6$ bananas cost \rupee~$90$; $6$ apples, $2$ oranges and $3$ bananas cost \rupee~$70$. Using the matrix method, find the cost of one fruit of each kind.
 \par\solution
@@ -522,13 +522,13 @@ The following code verifies this.
 \end{lstlisting}
 
 \item 
-\textbf{(a)} If $y\sqrt{x^2+1} = \log\brak{\sqrt{x^2+1}-x}$, show that $\brak{x^2+1}\diff{y}{x} + xy + 1 = 0$.
+(a) If $y\sqrt{x^2+1} = \log\brak{\sqrt{x^2+1}-x}$, show that $\brak{x^2+1}\diff{y}{x} + xy + 1 = 0$.
 
-\textbf{OR}
+OR
 
-\textbf{(b)} Find the derivative of $x^{\cot x} + \dfrac{2x^2-3}{2x^2-x+2}$ with respect to $x$.
+(b) Find the derivative of $x^{\cot x} + \dfrac{2x^2-3}{2x^2-x+2}$ with respect to $x$.
 \par\solution
-\textbf{(a)} Let $s = \sqrt{x^2+1}$, so $\diff{s}{x} = \frac{x}{s}$. Differentiating $ys = \log\brak{s-x}$,
+(a) Let $s = \sqrt{x^2+1}$, so $\diff{s}{x} = \frac{x}{s}$. Differentiating $ys = \log\brak{s-x}$,
 \begin{align}
 	s\diff{y}{x} + \frac{xy}{s} = \frac{1}{s-x}\brak{\frac{x}{s} - 1} = \frac{1}{s-x}\cdot\frac{x-s}{s} = -\frac{1}{s}
 \end{align}
@@ -536,7 +536,7 @@ Multiplying by $s$ and using $s^2 = x^2+1$,
 \begin{align}
 	\brak{x^2+1}\diff{y}{x} + xy + 1 = 0
 \end{align}
-\textbf{(b)} Let $u = x^{\cot x}$ and $v = \frac{2x^2-3}{2x^2-x+2}$. From \eqref{eq:EE26BTECH11202-logdiff},
+(b) Let $u = x^{\cot x}$ and $v = \frac{2x^2-3}{2x^2-x+2}$. From \eqref{eq:EE26BTECH11202-logdiff},
 \begin{align}
 	\diff{u}{x} &= x^{\cot x}\diff{}{x}\brak{\cot x\log x} = x^{\cot x}\brak{\frac{\cot x}{x} - \text{cosec}^2 x\log x}
 	\\
@@ -577,13 +577,13 @@ The following code computes the area and generates \figref{fig:EE26BTECH11202-2}
 \end{figure}
 
 \item 
-\textbf{(a)} Find the foot of the perpendicular from the point $\vec{Q} = \myvec{0 \\ 2 \\ 3}$ on the line $\dfrac{-x-3}{-5} = \dfrac{1-y}{-2} = \dfrac{3z+12}{9}$ and hence the length of the perpendicular.
+(a) Find the foot of the perpendicular from the point $\vec{Q} = \myvec{0 \\ 2 \\ 3}$ on the line $\dfrac{-x-3}{-5} = \dfrac{1-y}{-2} = \dfrac{3z+12}{9}$ and hence the length of the perpendicular.
 
-\textbf{OR}
+OR
 
-\textbf{(b)} Find $p$ if the shortest distance between the lines $\vec{x} = \myvec{1 \\ 2 \\ 1} + \lambda\myvec{1 \\ -1 \\ 1}$ and $\vec{x} = \myvec{p \\ -1 \\ -1} + \mu\myvec{2 \\ 1 \\ 2}$ is $\dfrac{3}{\sqrt{2}}$ units.
+(b) Find $p$ if the shortest distance between the lines $\vec{x} = \myvec{1 \\ 2 \\ 1} + \lambda\myvec{1 \\ -1 \\ 1}$ and $\vec{x} = \myvec{p \\ -1 \\ -1} + \mu\myvec{2 \\ 1 \\ 2}$ is $\dfrac{3}{\sqrt{2}}$ units.
 \par\solution
-\textbf{(a)} The line is $\frac{x+3}{5} = \frac{y-1}{2} = \frac{z+4}{3}$, i.e.,
+(a) The line is $\frac{x+3}{5} = \frac{y-1}{2} = \frac{z+4}{3}$, i.e.,
 \begin{align}
 	\vec{x} = \vec{P}_0 + \lambda\vec{m}, \quad \vec{P}_0 = \myvec{-3 \\ 1 \\ -4}, \; \vec{m} = \myvec{5 \\ 2 \\ 3}
 \end{align}
@@ -596,7 +596,7 @@ The length of the perpendicular is
 \begin{align}
 	\norm{\vec{F}-\vec{Q}} = \norm{\myvec{2 \\ 1 \\ -4}} = \sqrt{4+1+16} = \sqrt{21}
 \end{align}
-\textbf{(b)} 
+(b) 
 \begin{align}
 	\vec{m}_1\times\vec{m}_2 = \myvec{\brak{-1}\brak{2}-\brak{1}\brak{1} \\ \brak{1}\brak{2}-\brak{1}\brak{2} \\ \brak{1}\brak{1}-\brak{-1}\brak{2}} = \myvec{-3 \\ 0 \\ 3},
 	\quad \norm{\vec{m}_1\times\vec{m}_2} = 3\sqrt{2}
@@ -609,19 +609,19 @@ With $\vec{A}_2-\vec{A}_1 = \myvec{p-1 \\ -3 \\ -2}$, from \eqref{eq:EE26BTECH11
 \end{enumerate}
 
 \vspace{2mm}
-\noindent\textbf{Section E} (Questions 36--38, 4 marks each)
+\noindentSection E (Questions 36--38, 4 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=36]
 
 
-\item \textbf{Case Study 2.} Three vaccines $A_1, A_2, A_3$ were given to $25\%$, $35\%$ and $40\%$ of the population respectively. They protect against the infection with probabilities $60\%$, $55\%$ and $50\%$ respectively. Find the probability that
+\item Case Study 2. Three vaccines $A_1, A_2, A_3$ were given to $25\%$, $35\%$ and $40\%$ of the population respectively. They protect against the infection with probabilities $60\%$, $55\%$ and $50\%$ respectively. Find the probability that
 \begin{enumerate}[label=(\roman*)]
 	\item a person taking vaccine $A_2$ gets infected. \hfill [1]
 	\item a randomly chosen person is protected from the infection. \hfill [1]
-	\item \textbf{(a)} the person was given vaccine $A_1$, given that the randomly chosen person is infected. \hfill [2]
+	\item (a) the person was given vaccine $A_1$, given that the randomly chosen person is infected. \hfill [2]
 
-	\textbf{OR}
+	OR
 
-	\textbf{(b)} the person was given vaccine $A_3$, given that the randomly chosen person is not infected. \hfill [2]
+	(b) the person was given vaccine $A_3$, given that the randomly chosen person is not infected. \hfill [2]
 \end{enumerate}
 \par\solution
 Let $E$ be the event that the person is protected, and
@@ -637,17 +637,17 @@ with $p_i = \pr{A_i}$ and $q_i = \pr{E\vert A_i}$.
 	\end{align}
 	\item Here $\pr{E^{\prime}} = 1 - \frac{217}{400} = \frac{183}{400}$. From \eqref{eq:EE26BTECH11202-bayes},
 	
-	\textbf{(a)}
+	(a)
 	\begin{align}
 		\pr{A_1\vert E^{\prime}} = \frac{p_1\brak{1-q_1}}{\pr{E^{\prime}}} = \frac{0.25 \times 0.40}{0.4575} = \frac{40}{183} \approx 0.219
 	\end{align}
-	\textbf{(b)}
+	(b)
 	\begin{align}
 		\pr{A_3\vert E} = \frac{p_3 q_3}{\vec{p}^{\top}\vec{q}} = \frac{0.40\times 0.50}{0.5425} = \frac{80}{217} \approx 0.369
 	\end{align}
 \end{enumerate}
 
-\item \textbf{Case Study 3.} A company produces cylindrical tumblers, open at the top, of fixed surface area. For a tumbler of volume $V$, height $h$ and base radius $r$ (\figref{fig:EE26BTECH11202-3}),
+\item Case Study 3. A company produces cylindrical tumblers, open at the top, of fixed surface area. For a tumbler of volume $V$, height $h$ and base radius $r$ (\figref{fig:EE26BTECH11202-3}),
 \begin{enumerate}[label=(\roman*)]
 	\item differentiate $V$ with respect to $r$ when the surface area is constant. \hfill [2]
 	\item if the volume is to be maximised, establish a relation between $h$ and $r$. \hfill [2]
