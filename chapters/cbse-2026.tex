@@ -1,4 +1,4 @@
-\noindentSection Section A (Questions 1--20, 1 mark each)
+\noindent Section A (Questions 1--20, 1 mark each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
 \item If the matrix $\vec{A} = \myvec{-p & q \\ r & p}$ is such that $\vec{A}^2 = \vec{I}$, then
 \begin{enumerate}[label=(\Alph*)]
@@ -10,16 +10,21 @@
 	\end{multicols}
 \end{enumerate}
 \par\solution
+By the Cayley--Hamilton theorem, a $2\times 2$ matrix satisfies its characteristic equation,
 \begin{align}
-	\vec{A}^2 = \myvec{-p & q \\ r & p}\myvec{-p & q \\ r & p}
-	= \myvec{p^2 + qr & 0 \\ 0 & p^2 + qr}
-	= \brak{p^2+qr}\vec{I}
+	\vec{A}^2 - \text{tr}\brak{\vec{A}}\vec{A} + \mydet{\vec{A}}\vec{I} = \vec{O}
+\end{align}
+Here $\text{tr}\brak{\vec{A}} = 0$ and $\mydet{\vec{A}} = -p^2 - qr$, so
+\begin{align}
+	\vec{A}^2 = \brak{p^2+qr}\vec{I}
 \end{align}
 Hence $\vec{A}^2 = \vec{I}$ gives $p^2 + qr = 1$, i.e., $1 - p^2 - qr = 0$. Option (B).
-The following code verifies this and the solutions of Problems~2, 4 and 5.
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Matrix.py}@*)
-\end{lstlisting}
+
+
+
+
+
+
 
 \item If $\vec{A}$ is a square matrix such that $\vec{A}^2 = \vec{A}$, then $\brak{\vec{A}-\vec{I}}^3 - \vec{A}$ is equal to
 \begin{enumerate}[label=(\Alph*)]
@@ -30,19 +35,24 @@ The following code verifies this and the solutions of Problems~2, 4 and 5.
 	\item $\vec{A}^2$
 	\end{multicols}
 \end{enumerate}
+
+
 \par\solution
-Since $\vec{A}^2 = \vec{A}$,
+Since $\vec{A}^2 = \vec{A}$, the matrix satisfies $x^2 - x = 0$, so its eigenvalues are $0$ or $1$. Dividing,
 \begin{align}
-	\brak{\vec{A}-\vec{I}}^2 &= \vec{A}^2 - 2\vec{A} + \vec{I} = \vec{I} - \vec{A}
-	\\
-	\brak{\vec{A}-\vec{I}}^3 &= \brak{\vec{A}-\vec{I}}\brak{\vec{I}-\vec{A}} = -\brak{\vec{I}-\vec{A}}^2 
-	= \vec{A} - \vec{I}
-	\\
-	\implies \brak{\vec{A}-\vec{I}}^3 - \vec{A} &= -\vec{I}
+	\brak{x-1}^3 - x = \brak{x-2}\brak{x^2-x} - 1
+\end{align}
+Replacing $x$ by $\vec{A}$ and using $\vec{A}^2 - \vec{A} = \vec{O}$,
+\begin{align}
+	\brak{\vec{A}-\vec{I}}^3 - \vec{A} = \brak{\vec{A}-2\vec{I}}\brak{\vec{A}^2-\vec{A}} - \vec{I} = -\vec{I}
 \end{align}
 Option (B).
 
-\item For the inverse trigonometric functions, which of the following principal value branches is not correctly defined?
+
+
+
+
+\item For the inverse trigonometric functions, which of the following principal value branches is \textbf{not} correctly defined?
 \begin{enumerate}[label=(\Alph*)]
 	\item $\tan^{-1}: \mathbb{R} \to \brak{-\frac{\pi}{2}, \frac{\pi}{2}}$
 	\item $\sec^{-1}: \mathbb{R}-\brak{-1,1} \to \sbrak{0,\pi} - \cbrak{\frac{\pi}{2}}$
@@ -50,11 +60,42 @@ Option (B).
 	\item $\text{cosec}^{-1}: \mathbb{R}-\brak{-1,1} \to \sbrak{-\frac{\pi}{2}, \frac{\pi}{2}}$
 \end{enumerate}
 \par\solution
-$\cosec x = \frac{1}{\sin x}$ is undefined at $\sin x = 0$, so $x = 0$ must be removed from the range. The correct branch is
+\figref{fig:EE26BTECH11202-6} shows the graphs of all four functions with their ranges.
+\begin{itemize}
+	\item $\tan^{-1}x$ stays strictly between $\pm\frac{\pi}{2}$, so (A) is correct.
+	\item $\sec^{-1}x$ lies in $\sbrak{0,\frac{\pi}{2}}$ for $x \ge 1$ and in $\brak{\frac{\pi}{2},\pi}$ for $x \le -1$. It never takes the value $\frac{\pi}{2}$, so (B) is correct.
+	\item $\cot^{-1}x$ decreases from $\pi$ to $0$ without reaching either value, so (C) is correct.
+\end{itemize}
+For (D), $\text{cosec}\,x = \frac{1}{\sin x}$ is undefined at $x = 0$ (\figref{fig:EE26BTECH11202-7}), so $x = 0$ must be removed from the restricted domain. The function then takes values in $\brak{-\infty,-1}\cup\sbrak{1,\infty}$, and reflecting about $y = x$ shows that $\text{cosec}^{-1}x$ never takes the value $0$. The correct branch is
 \begin{align}
 	\text{cosec}^{-1}: \mathbb{R}-\brak{-1,1} \to \sbrak{-\frac{\pi}{2}, \frac{\pi}{2}} - \cbrak{0}
 \end{align}
-The other three branches are the standard ones. Option (D).
+Option (D) leaves out $\cbrak{0}$, so it is not correctly defined. Option (D).
+The following code generates \figref{fig:EE26BTECH11202-6} and \figref{fig:EE26BTECH11202-7}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Branches.py}@*)
+\end{lstlisting}
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Cosec.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figs/Branches.png}
+	\caption{Principal value branches of $\tan^{-1}$, $\sec^{-1}$, $\cot^{-1}$ and $\text{cosec}^{-1}$}
+	\label{fig:EE26BTECH11202-6}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figs/Cosec.png}
+	\caption{$\text{cosec}\,x$ on $\sbrak{-\frac{\pi}{2},\frac{\pi}{2}}-\cbrak{0}$ and its inverse}
+	\label{fig:EE26BTECH11202-7}
+\end{figure}
+
+
+
+
+
+
 
 \item Let $\vec{A} = \myvec{0 & -3 & 4 \\ 1 & 0 & 2}$ and $\vec{B} = \myvec{-3 & 0 & 1 \\ 2 & 4 & 0}$. If $\vec{A}+\vec{B}+\vec{C} = \vec{O}$, then the matrix $\vec{C}$ is
 \begin{enumerate}[label=(\Alph*)]
@@ -71,22 +112,52 @@ The other three branches are the standard ones. Option (D).
 	= \myvec{3 & 3 & -5 \\ -3 & -4 & -2}
 \end{align}
 Option (C).
+The following code verifies the answer
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Q4.py}@*)
+\end{lstlisting}
 
-\item If $\vec{A}$ is non-singular, which of the following is not true?
-\begin{enumerate}[label=(\Alph*)]
-	\begin{multicols}{2}
-	\item $\text{adj}\,\vec{A}$ is singular
-	\item $\brak{\text{adj}\,\vec{A}}^{-1} = \text{adj}\brak{\vec{A}^{-1}}$
-	\item $\mydet{\vec{A}} \ne 0$
-	\item $\vec{A}^{-1}$ exists
-	\end{multicols}
+
+\item If $A$ is non-singular, which of the following is not true?
+\begin{enumerate}[(A)]
+    \item $\text{adj } A$ is singular
+    \item $(\text{adj } A)^{-1} = \text{adj}(A^{-1})$
+    \item $|A| \neq 0$
+    \item $A^{-1}$ exists
 \end{enumerate}
-\par\solution
-For a non-singular $\vec{A}$ of order $n$, from \eqref{eq:EE26BTECH11202-adj-det},
-\begin{align}
-	\mydet{\text{adj}\,\vec{A}} = \mydet{\vec{A}}^{n-1} \ne 0
-\end{align}
-so $\text{adj}\,\vec{A}$ is non-singular and statement (A) is false. Option (A).
+
+\noindent\textbf{Solution:} For a non-singular matrix $A$ of order $n$, 
+\begin{equation}
+|\text{adj } A| = |A|^{n-1} \neq 0
+\end{equation}
+so $\text{adj } A$ is also non-singular. Hence, statement (A) is false.
+
+Example ($2 \times 2$ Matrix Verification) 
+Let $A = \begin{pmatrix} 4 & 3 \\ 3 & 2 \end{pmatrix}$. 
+Since $|A| = (4)(2) - (3)(3) = -1 \neq 0$, $A$ is non-singular.
+The adjugate matrix is:
+\begin{equation}
+\text{adj } A = \begin{pmatrix} 2 & -3 \\ -3 & 4 \end{pmatrix}
+\end{equation}
+Evaluating its determinant yields:
+\begin{equation}
+|\text{adj } A| = (2)(4) - (-3)(-3) = 8 - 9 = -1 \neq 0
+\end{equation}
+Since $|\text{adj } A| = -1 \neq 0$, $\text{adj } A$ is non-singular. 
+Option (A). 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \item If $f\brak{x} = \begin{cases} \dfrac{x^2-4x-5}{x+1}, & x \ne -1 \\ k, & x = -1 \end{cases}$
 is continuous at $x = -1$, then the value of $k$ is
@@ -104,6 +175,16 @@ Since $x^2-4x-5 = \brak{x-5}\brak{x+1}$, continuity requires
 	k = \lim_{x \to -1}\frac{\brak{x-5}\brak{x+1}}{x+1} = \lim_{x\to -1}\brak{x-5} = -6
 \end{align}
 Option (D).
+The following code plots the graph
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.6.py}@*)
+\end{lstlisting}
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{figs/1.2.6.png}@*)
+\end{lstlisting}
+
+
+
 
 \item If the area of $\triangle ABC$ with vertices $\vec{A} = \myvec{3 \\ 1}$, $\vec{B} = \myvec{-2 \\ 1}$ and $\vec{C} = \myvec{0 \\ k}$ is $5$ sq. units, then the values of $k$ are
 \begin{enumerate}[label=(\Alph*)]
@@ -124,7 +205,16 @@ From \eqref{eq:EE26BTECH11202-area},
 	\\
 	\implies k - 1 &= \pm 2 \implies k = 3 \text{ or } -1
 \end{align}
-Option (B). The code in Problem~25 verifies this.
+Option (B). The following figure verifies this.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figs/Triangle.png}
+	\label{fig:EE26BTECH11202-6}
+\end{figure}
+
+
+
+
 
 \item The derivative of $\cos^{-1}\brak{\dfrac{\sin x + \cos x}{\sqrt{2}}}$, $-\dfrac{\pi}{4} < x < \dfrac{\pi}{4}$, with respect to $x$ is
 \begin{enumerate}[label=(\Alph*)]
@@ -161,7 +251,20 @@ Option (A).
 	f^{\prime}\brak{x} = 2\brak{x-2} < 0 \quad \text{for } x \in \left[-3, 2\right)
 \end{align}
 So $f$ is decreasing on $\sbrak{-3,2}$ and the minimum is at the right end,
-$f\brak{2} = 5$. Option (C).
+$f\brak{2} = 5$. Option (C). The following plot verifies the answer.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{figs/1.2.9.png}
+	\label{fig:EE26BTECH11202-6}
+\end{figure}
+
+
+
+
+
+
+
 
 \item $\displaystyle\int \frac{1}{\sqrt{1+\cos 2x}}\,dx$ is equal to
 \begin{enumerate}[label=(\Alph*)]
@@ -292,14 +395,12 @@ Here $\pr{A} = \frac{1}{5}$ and $\pr{B} = \frac{3}{5}$. From \eqref{eq:EE26BTECH
 	\\
 	\pr{A+B} &= \frac{1}{5} + \frac{3}{5} - \frac{2}{5} = \frac{2}{5}
 \end{align}
-Option (D). Note that the given data are not consistent, since $\pr{AB} > \pr{A}$; the answer follows from the formula as the paper intends.
-The code in Problem~31 verifies this.
-\end{enumerate}
+Option (D). \end{enumerate}
 
 
 
 \vspace{2mm}
-\noindentSection Section B (Questions 21--25, 2 marks each)
+\noindent Section B (Questions 21--25, 2 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=21]
 \item Evaluate $\sin\sbrak{\tan^{-1}\brak{\tan\frac{3\pi}{4}}}$.
 \par\solution
@@ -330,7 +431,7 @@ OR
 	\\
 	\implies \diff{^2y}{x^2} + u^2y &= 0
 \end{align}
-\textit{Remark:} this is the equation of a sinusoidal signal of angular frequency $u$, e.g., the voltage across an ideal LC tank.
+
 
 \item Determine the values of $x$ for which $f\brak{x} = \dfrac{x-3}{x+1}$, $x \ne -1$, is an increasing function.
 \par\solution
@@ -339,6 +440,28 @@ OR
 	\quad \forall x \ne -1
 \end{align}
 Since $f^{\prime}\brak{x} > 0$, $f$ is increasing on $\brak{-\infty,-1}$ and on $\brak{-1,\infty}$, i.e., for all $x \in \mathbb{R}-\cbrak{-1}$.
+Following code and graph verifies this.
+
+
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.23.py}@*)
+\end{lstlisting}
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figs/1.2.23.png}
+	
+\end{figure}
+
+
+
+
+
+
+
+
 
 \item 
 (a) Three honey bees fly along the vectors $\vec{a} = \myvec{2 \\ -3 \\ 1}$, $\vec{b} = \myvec{0 \\ 4 \\ -2}$ and $\vec{c} = \myvec{3 \\ 0 \\ 2}$. Find $\lambda$ such that the path for $\vec{a}+\lambda\vec{b}$ is perpendicular to $\vec{c}$.
@@ -352,6 +475,17 @@ OR
 	\brak{\vec{a}+\lambda\vec{b}}^{\top}\vec{c} = \vec{a}^{\top}\vec{c} + \lambda\vec{b}^{\top}\vec{c} = 8 - 4\lambda = 0
 	\implies \lambda = 2
 \end{align}
+The following code Verifies the answer.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.24.py}@*)
+\end{lstlisting}
+
+
+
+
+
+
+
 (b) 
 \begin{align}
 	\vec{AB}\times\vec{AC} = \myvec{\brak{2}\brak{0}-\brak{-1}\brak{-3} \\ \brak{-1}\brak{2}-\brak{1}\brak{0} \\ \brak{1}\brak{-3}-\brak{2}\brak{2}}
@@ -361,6 +495,22 @@ From \eqref{eq:EE26BTECH11202-area},
 \begin{align}
 	\text{Area} = \frac{1}{2}\sqrt{9+4+49} = \frac{\sqrt{62}}{2} \text{ sq. units}
 \end{align}
+The following code verifies and plots the following graph.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.24.py}@*)
+\end{lstlisting}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figs/1.2.24.png}
+	
+\end{figure}
+
+
+
+
+
 
 \item Find the angle between the lines
 \begin{align}
@@ -378,14 +528,14 @@ From \eqref{eq:EE26BTECH11202-angle},
 	\cos\theta = \frac{3 + 4 + 12}{7 \cdot 3} = \frac{19}{21}
 	\implies \theta = \cos^{-1}\brak{\frac{19}{21}} \approx 25.2\degree
 \end{align}
-The following code verifies this and Problems~7, 16, 17, 24, 30 and 35.
+The following code verifies this.
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Lines.py}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.25.py}@*)
 \end{lstlisting}
 \end{enumerate}
 
 \vspace{2mm}
-\noindentSection Section C (Questions 26--31, 3 marks each)
+\noindent Section C (Questions 26--31, 3 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=26]
 \item A spherical balloon loses its volume due to escape of air in such a way that the decrease of volume at any instant is proportional to its surface area. Show that the radius is decreasing at a constant rate.
 \par\solution
@@ -423,23 +573,35 @@ The $\int\cot\frac{x}{2}\,dx$ terms cancel, so
 	\\
 	&= \log\brak{3+\sqrt{11}} - \log\brak{1+\sqrt{3}} = \log\frac{3+\sqrt{11}}{1+\sqrt{3}}
 \end{align}
-The following code verifies this and Problems~8, 10, 22, 23, 28 and 33.
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Calculus.py}@*)
-\end{lstlisting}
 
 \item Solve the differential equation $\brak{x + 2y^3}\,dy = y\,dx$.
 \par\solution
-Treating $x$ as a function of $y$,
+Multiplying by $y$, the equation becomes $y\diff{x}{y} - x = 2y^3$. Treat $y$ as the time variable and let $x\brak{y} \system{L} X\brak{s}$. Using
 \begin{align}
-	\diff{x}{y} - \frac{1}{y}x = 2y^2
+	\diff{x}{y} \system{L} sX - x\brak{0}, \quad
+	y f\brak{y} \system{L} -\diff{F}{s}, \quad
+	y^n \system{L} \frac{n!}{s^{n+1}}
 \end{align}
-This is linear with integrating factor $e^{-\int dy/y} = \frac{1}{y}$. Hence
+we get
 \begin{align}
-	\diff{}{y}\brak{\frac{x}{y}} = 2y \implies \frac{x}{y} = y^2 + C
-	\implies x = y^3 + Cy
+	y\diff{x}{y} \system{L} -\diff{}{s}\brak{sX - x\brak{0}} = -X - sX^{\prime}, \quad
+	2y^3 \system{L} \frac{12}{s^4}
 \end{align}
-
+Hence
+\begin{align}
+	-X - sX^{\prime} - X = \frac{12}{s^4}
+	\implies X^{\prime} + \frac{2}{s}X = -\frac{12}{s^5}
+\end{align}
+This is linear in $s$ with integrating factor $s^2$,
+\begin{align}
+	\diff{}{s}\brak{s^2X} = -\frac{12}{s^3}
+	\implies s^2X = \frac{6}{s^2} + C
+	\implies X\brak{s} = \frac{6}{s^4} + \frac{C}{s^2}
+\end{align}
+Taking the inverse Laplace transform,
+\begin{align}
+	x = y^3 + Cy
+\end{align}
 
 \item 
 (a) Three toys $A$, $B$ and $C$ are placed on a straight line. If their position vectors are $\myvec{55 \\ -2}$, $\myvec{5 \\ 8}$ and $\myvec{a \\ -52}$ respectively, find $a$.
@@ -493,7 +655,7 @@ The following code verifies this and Problems~18 and 37.
 \end{enumerate}
 
 \vspace{2mm}
-\noindentSection Section D (Questions 32--35, 5 marks each)
+\noindent Section D (Questions 32--35, 5 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=32]
 \item A man buys fruits. $4$ apples, $3$ oranges and $2$ bananas cost \rupee~$60$; $2$ apples, $4$ oranges and $6$ bananas cost \rupee~$90$; $6$ apples, $2$ oranges and $3$ bananas cost \rupee~$70$. Using the matrix method, find the cost of one fruit of each kind.
 \par\solution
