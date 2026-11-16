@@ -52,7 +52,7 @@ Option (B).
 
 
 
-\item For the inverse trigonometric functions, which of the following principal value branches is \textbf{not} correctly defined?
+\item For the inverse trigonometric functions, which of the following principal value branches is not correctly defined?
 \begin{enumerate}[label=(\Alph*)]
 	\item $\tan^{-1}: \mathbb{R} \to \brak{-\frac{\pi}{2}, \frac{\pi}{2}}$
 	\item $\sec^{-1}: \mathbb{R}-\brak{-1,1} \to \sbrak{0,\pi} - \cbrak{\frac{\pi}{2}}$
@@ -60,18 +60,18 @@ Option (B).
 	\item $\text{cosec}^{-1}: \mathbb{R}-\brak{-1,1} \to \sbrak{-\frac{\pi}{2}, \frac{\pi}{2}}$
 \end{enumerate}
 \par\solution
-\figref{fig:EE26BTECH11202-6} shows the graphs of all four functions with their ranges.
+\figref{fig:EE26BTECH11226-6} shows the graphs of all four functions with their ranges.
 \begin{itemize}
 	\item $\tan^{-1}x$ stays strictly between $\pm\frac{\pi}{2}$, so (A) is correct.
 	\item $\sec^{-1}x$ lies in $\sbrak{0,\frac{\pi}{2}}$ for $x \ge 1$ and in $\brak{\frac{\pi}{2},\pi}$ for $x \le -1$. It never takes the value $\frac{\pi}{2}$, so (B) is correct.
 	\item $\cot^{-1}x$ decreases from $\pi$ to $0$ without reaching either value, so (C) is correct.
 \end{itemize}
-For (D), $\text{cosec}\,x = \frac{1}{\sin x}$ is undefined at $x = 0$ (\figref{fig:EE26BTECH11202-7}), so $x = 0$ must be removed from the restricted domain. The function then takes values in $\brak{-\infty,-1}\cup\sbrak{1,\infty}$, and reflecting about $y = x$ shows that $\text{cosec}^{-1}x$ never takes the value $0$. The correct branch is
+For (D), $\text{cosec}\,x = \frac{1}{\sin x}$ is undefined at $x = 0$ (\figref{fig:EE26BTECH11226-7}), so $x = 0$ must be removed from the restricted domain. The function then takes values in $\brak{-\infty,-1}\cup\sbrak{1,\infty}$, and reflecting about $y = x$ shows that $\text{cosec}^{-1}x$ never takes the value $0$. The correct branch is
 \begin{align}
 	\text{cosec}^{-1}: \mathbb{R}-\brak{-1,1} \to \sbrak{-\frac{\pi}{2}, \frac{\pi}{2}} - \cbrak{0}
 \end{align}
 Option (D) leaves out $\cbrak{0}$, so it is not correctly defined. Option (D).
-The following code generates \figref{fig:EE26BTECH11202-6} and \figref{fig:EE26BTECH11202-7}.
+The following code generates \figref{fig:EE26BTECH11226-6} and \figref{fig:EE26BTECH11226-7}.
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Branches.py}@*)
 \end{lstlisting}
@@ -82,13 +82,13 @@ The following code generates \figref{fig:EE26BTECH11202-6} and \figref{fig:EE26B
 	\centering
 	\includegraphics[width=0.9\linewidth]{figs/Branches.png}
 	\caption{Principal value branches of $\tan^{-1}$, $\sec^{-1}$, $\cot^{-1}$ and $\text{cosec}^{-1}$}
-	\label{fig:EE26BTECH11202-6}
+	\label{fig:EE26BTECH11226-6}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{figs/Cosec.png}
 	\caption{$\text{cosec}\,x$ on $\sbrak{-\frac{\pi}{2},\frac{\pi}{2}}-\cbrak{0}$ and its inverse}
-	\label{fig:EE26BTECH11202-7}
+	\label{fig:EE26BTECH11226-7}
 \end{figure}
 
 
@@ -118,33 +118,54 @@ The following code verifies the answer
 \end{lstlisting}
 
 
-\item If $A$ is non-singular, which of the following is not true?
-\begin{enumerate}[(A)]
-    \item $\text{adj } A$ is singular
-    \item $(\text{adj } A)^{-1} = \text{adj}(A^{-1})$
-    \item $|A| \neq 0$
-    \item $A^{-1}$ exists
+\item If $\vec{A}$ is non-singular, which of the following is not true?
+\begin{enumerate}[label=(\Alph*)]
+	\begin{multicols}{2}
+	\item $\text{adj}\,\vec{A}$ is singular
+	\item $\brak{\text{adj}\,\vec{A}}^{-1} = \text{adj}\brak{\vec{A}^{-1}}$
+	\item $\mydet{\vec{A}} \ne 0$
+	\item $\vec{A}^{-1}$ exists
+	\end{multicols}
 \end{enumerate}
+\par\solution
+For a non-singular matrix $\vec{A}$ of order $n$,
+\begin{align}
+	\mydet{\text{adj}\,\vec{A}} = \mydet{\vec{A}}^{n-1} \ne 0
+\end{align}
+so $\text{adj}\,\vec{A}$ is also non-singular and statement (A) is false.
 
-\noindent\textbf{Solution:} For a non-singular matrix $A$ of order $n$, 
-\begin{equation}
-|\text{adj } A| = |A|^{n-1} \neq 0
-\end{equation}
-so $\text{adj } A$ is also non-singular. Hence, statement (A) is false.
+Example: let $\vec{A} = \myvec{4 & 3 \\ 3 & 2}$. Then $\mydet{\vec{A}} = 8 - 9 = -1 \ne 0$, so $\vec{A}$ is non-singular, and
+\begin{align}
+	\text{adj}\,\vec{A} = \myvec{2 & -3 \\ -3 & 4}, \quad
+	\vec{A}^{-1} = \frac{1}{\mydet{\vec{A}}}\text{adj}\,\vec{A} = \myvec{-2 & 3 \\ 3 & -4}
+\end{align}
+(A) The determinant of the adjugate is
+\begin{align}
+	\mydet{\text{adj}\,\vec{A}} = 8 - 9 = -1 \ne 0
+\end{align}
+so $\text{adj}\,\vec{A}$ is non-singular and (A) is false.
 
-Example ($2 \times 2$ Matrix Verification) 
-Let $A = \begin{pmatrix} 4 & 3 \\ 3 & 2 \end{pmatrix}$. 
-Since $|A| = (4)(2) - (3)(3) = -1 \neq 0$, $A$ is non-singular.
-The adjugate matrix is:
-\begin{equation}
-\text{adj } A = \begin{pmatrix} 2 & -3 \\ -3 & 4 \end{pmatrix}
-\end{equation}
-Evaluating its determinant yields:
-\begin{equation}
-|\text{adj } A| = (2)(4) - (-3)(-3) = 8 - 9 = -1 \neq 0
-\end{equation}
-Since $|\text{adj } A| = -1 \neq 0$, $\text{adj } A$ is non-singular. 
-Option (A). 
+(B) Using $\text{adj}\brak{\vec{A}^{-1}}$ for the $2\times 2$ matrix $\vec{A}^{-1}$,
+\begin{align}
+	\text{adj}\brak{\vec{A}^{-1}} = \myvec{-4 & -3 \\ -3 & -2}
+\end{align}
+and, since $\text{adj}\brak{\text{adj}\,\vec{A}} = \vec{A}$ for a $2\times 2$ matrix,
+\begin{align}
+	\brak{\text{adj}\,\vec{A}}^{-1} = \frac{1}{\mydet{\text{adj}\,\vec{A}}}\text{adj}\brak{\text{adj}\,\vec{A}}
+	= -\myvec{4 & 3 \\ 3 & 2} = \myvec{-4 & -3 \\ -3 & -2}
+\end{align}
+Both sides are equal, so (B) is true.
+
+(C) $\mydet{\vec{A}} = -1 \ne 0$, so (C) is true.
+
+(D) $\vec{A}^{-1}$ exists, and
+\begin{align}
+	\vec{A}\vec{A}^{-1} = \myvec{4 & 3 \\ 3 & 2}\myvec{-2 & 3 \\ 3 & -4}
+	= \myvec{-8+9 & 12-12 \\ -6+6 & 9-8} = \vec{I}
+\end{align}
+so (D) is true.
+
+Only (A) is not true. Option (A).
 
 
 
@@ -199,7 +220,7 @@ The following code plots the graph
 \begin{align}
 	\vec{B}-\vec{A} = \myvec{-5 \\ 0}, \quad \vec{C}-\vec{A} = \myvec{-3 \\ k-1}
 \end{align}
-From \eqref{eq:EE26BTECH11202-area},
+From \eqref{eq:EE26BTECH11226-area},
 \begin{align}
 	\frac{1}{2}\abs{\mydet{-5 & -3 \\ 0 & k-1}} &= \frac{5}{2}\abs{k-1} = 5
 	\\
@@ -209,7 +230,6 @@ Option (B). The following figure verifies this.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{figs/Triangle.png}
-	\label{fig:EE26BTECH11202-6}
 \end{figure}
 
 
@@ -226,16 +246,27 @@ Option (B). The following figure verifies this.
 	\end{multicols}
 \end{enumerate}
 \par\solution
+Let $f\brak{x} = \cos^{-1}\brak{\frac{\sin x + \cos x}{\sqrt{2}}}$. The derivative is approximated by the central difference
 \begin{align}
-	\frac{\sin x + \cos x}{\sqrt{2}} = \myvec{\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}}\myvec{\sin x \\ \cos x}
-	= \cos x\cos\frac{\pi}{4} + \sin x\sin\frac{\pi}{4} = \cos\brak{x-\frac{\pi}{4}}
+	f^{\prime}\brak{x} \approx D_h\brak{x} = \frac{f\brak{x+h} - f\brak{x-h}}{2h}
 \end{align}
-For $-\frac{\pi}{4} < x < \frac{\pi}{4}$, we have $x - \frac{\pi}{4} \in \brak{-\frac{\pi}{2}, 0}$, so
-\begin{align}
-	\cos^{-1}\cos\brak{x-\frac{\pi}{4}} = \frac{\pi}{4} - x
-	\implies \diff{}{x}\brak{\frac{\pi}{4}-x} = -1
-\end{align}
-Option (A).
+with $x \pm h$ kept inside $\brak{-\frac{\pi}{4}, \frac{\pi}{4}}$. Taking $h = 0.1$,
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$x$ & $f\brak{x+h}$ & $f\brak{x-h}$ & $D_h\brak{x}$ \\
+	\hline
+	$-0.5$ & $1.1854$ & $1.3854$ & $-1.0000$ \\
+	$0$ & $0.6854$ & $0.8854$ & $-1.0000$ \\
+	$0.5$ & $0.1854$ & $0.3854$ & $-1.0000$ \\
+	\hline
+\end{tabular}
+\end{center}
+The value is $-1$ at every $x$, and it does not change when $h$ is reduced to $0.01$ or $0.001$. So the derivative is the constant $-1$. Option (A).
+The following code computes the table.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.8.py}@*)
+\end{lstlisting}
 
 \item The absolute minimum value of $f\brak{x} = \brak{x-2}^2 + 5$ in the interval $\sbrak{-3, 2}$ is
 \begin{enumerate}[label=(\Alph*)]
@@ -256,7 +287,6 @@ $f\brak{2} = 5$. Option (C). The following plot verifies the answer.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9\linewidth]{figs/1.2.9.png}
-	\label{fig:EE26BTECH11202-6}
 \end{figure}
 
 
@@ -266,23 +296,7 @@ $f\brak{2} = 5$. Option (C). The following plot verifies the answer.
 
 
 
-\item $\displaystyle\int \frac{1}{\sqrt{1+\cos 2x}}\,dx$ is equal to
-\begin{enumerate}[label=(\Alph*)]
-	\begin{multicols}{2}
-	\item $\log\cos x + C$
-	\item $\frac{1}{\sqrt{2}}\log\abs{\sec x + \tan x} + C$
-	\item $\frac{1}{\sqrt{2}}\log\abs{\sec x - \tan x} + C$
-	\item $\log\sin 2x + C$
-	\end{multicols}
-\end{enumerate}
-\par\solution
-Since $1 + \cos 2x = 2\cos^2 x$, taking $\cos x > 0$,
-\begin{align}
-	\int\frac{dx}{\sqrt{2}\cos x} = \frac{1}{\sqrt{2}}\int\sec x\,dx
-	= \frac{1}{\sqrt{2}}\log\abs{\sec x + \tan x} + C
-\end{align}
-from \eqref{eq:EE26BTECH11202-int-sec}. Option (B).
-
+\setcounter{enumi}{10}
 \item The value of $\displaystyle\int_{-5}^{-1}\frac{1}{x}\,dx$ is equal to
 \begin{enumerate}[label=(\Alph*)]
 	\begin{multicols}{4}
@@ -297,6 +311,29 @@ from \eqref{eq:EE26BTECH11202-int-sec}. Option (B).
 	\int_{-5}^{-1}\frac{dx}{x} = \sbrak{\log\abs{x}}_{-5}^{-1} = \log 1 - \log 5 = -\log 5
 \end{align}
 Option (A).
+
+Numerical check using the trapezoidal rule. Divide $\sbrak{-5,-1}$ into $n$ equal strips of width $h = \frac{4}{n}$ with $x_k = -5 + kh$. Then
+\begin{align}
+	\int_{-5}^{-1}\frac{dx}{x} \approx T_n = h\brak{\frac{f\brak{x_0}}{2} + \sum_{k=1}^{n-1} f\brak{x_k} + \frac{f\brak{x_n}}{2}}, \quad f\brak{x} = \frac{1}{x}
+\end{align}
+The exact value is $-\log 5 = -1.609438$.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$n$ & $h$ & $T_n$ & $\abs{T_n + \log 5}$ \\
+	\hline
+	$4$ & $1$ & $-1.683333$ & $7.39\times 10^{-2}$ \\
+	$8$ & $0.5$ & $-1.628968$ & $1.95\times 10^{-2}$ \\
+	$16$ & $0.25$ & $-1.614406$ & $4.97\times 10^{-3}$ \\
+	$100$ & $0.04$ & $-1.609566$ & $1.28\times 10^{-4}$ \\
+	$1000$ & $0.004$ & $-1.609439$ & $1.28\times 10^{-6}$ \\
+	\hline
+\end{tabular}
+\end{center}
+So the value is $-\log 5$, option (A). Options (B) and (D) are functions of $x$, not constants, and $\log\brak{-5}$ in (C) is not a real number. The following code computes the table.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Trapz.py}@*)
+\end{lstlisting}
 
 \item An ant crawls on a sheet of paper along the line $y = 2x - 4$. The area of the surface bounded by the $y$-axis, the $x$-axis and $x = 1$ is
 \begin{enumerate}[label=(\Alph*)]
@@ -339,9 +376,23 @@ The following code verifies and plots the graph
 	\end{multicols}
 \end{enumerate}
 \par\solution
-Separating the variables,
+Let $v\brak{x} = e^{y\brak{x}}$ for $x \ge 0$. Differentiating with respect to $x$,
 \begin{align}
-	e^{y}\,dy = e^{3x}\,dx \implies e^{y} = \frac{e^{3x}}{3} + C^{\prime}
+	\diff{v}{x} = e^{y}\diff{y}{x} = e^{y}\brak{e^{3x}e^{-y}} = e^{3x}
+\end{align}
+Multiplying by the unit step $u\brak{x}$, which is $1$ for $x \ge 0$ and $0$ for $x < 0$, and taking the Laplace transform with $v\brak{x}u\brak{x} \system{L} V\brak{s}$ and $e^{3x}u\brak{x} \system{L} \frac{1}{s-3}$,
+\begin{align}
+	sV\brak{s} - v\brak{0} = \frac{1}{s-3}
+	\implies V\brak{s} = \frac{v\brak{0}}{s} + \frac{1}{s\brak{s-3}}
+	= \frac{v\brak{0} - \frac{1}{3}}{s} + \frac{1}{3}\cdot\frac{1}{s-3}
+\end{align}
+Using $u\brak{x} \system{L} \frac{1}{s}$ and $e^{3x}u\brak{x} \system{L} \frac{1}{s-3}$ and taking the inverse Laplace transform,
+\begin{align}
+	v\brak{x} = \brak{v\brak{0} - \frac{1}{3}}u\brak{x} + \frac{1}{3}e^{3x}u\brak{x}
+\end{align}
+Since $u\brak{x} = 1$ for $x \ge 0$,
+\begin{align}
+	e^{y} = \frac{e^{3x}}{3} + C^{\prime}
 	\implies 3e^{y} = e^{3x} + C
 \end{align}
 Option (A).
@@ -373,7 +424,7 @@ Option (D).
 	\end{multicols}
 \end{enumerate}
 \par\solution
-The strips of the cross are perpendicular. From \eqref{eq:EE26BTECH11202-ortho},
+The strips of the cross are perpendicular. From \eqref{eq:EE26BTECH11226-ortho},
 \begin{align}
 	\vec{a}^{\top}\vec{b} = 6 - 8 + 5\lambda = 0 \implies \lambda = \frac{2}{5}
 \end{align}
@@ -389,11 +440,16 @@ Option (C).
 	\end{multicols}
 \end{enumerate}
 \par\solution
-Here $\pr{A} = \frac{1}{5}$ and $\pr{B} = \frac{3}{5}$. From \eqref{eq:EE26BTECH11202-cond},
+Let $X, Y \in \cbrak{0,1}$ be the indicators of $A$ and $B$ with joint pmf $\vec{P} = \myvec{p_{11} & p_{12} \\ p_{21} & p_{22}}$, where $p_{11} = \pr{A^{\prime}B^{\prime}}$ and $p_{22} = \pr{AB}$, and let $\vec{e} = \myvec{0 \\ 1}$. From \eqref{eq:EE26BTECH11226-pmf-joint},
 \begin{align}
-	\pr{AB} &= \pr{A\vert B}\pr{B} = \frac{2}{3}\cdot\frac{3}{5} = \frac{2}{5}
-	\\
-	\pr{A+B} &= \frac{1}{5} + \frac{3}{5} - \frac{2}{5} = \frac{2}{5}
+	\vec{e}^{\top}\vec{P}\vec{1} = \frac{1}{5}, \quad
+	\vec{1}^{\top}\vec{P}\vec{e} = \frac{3}{5}, \quad
+	p_{22} = \pr{A\vert B}\,\vec{1}^{\top}\vec{P}\vec{e} = \frac{2}{5}
+\end{align}
+Since $\vec{1}^{\top}\vec{P}\vec{1} = 1$,
+\begin{align}
+	p_{11} = 1 - \frac{1}{5} - \frac{3}{5} + \frac{2}{5} = \frac{3}{5}
+	\implies \pr{A+B} = 1 - p_{11} = \frac{2}{5}
 \end{align}
 Option (D). \end{enumerate}
 
@@ -401,38 +457,7 @@ Option (D). \end{enumerate}
 
 \vspace{2mm}
 \noindent Section B (Questions 21--25, 2 marks each)
-\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=21]
-\item Evaluate $\sin\sbrak{\tan^{-1}\brak{\tan\frac{3\pi}{4}}}$.
-\par\solution
-$\tan\frac{3\pi}{4} = -1$ and the principal value of $\tan^{-1}$ lies in $\brak{-\frac{\pi}{2},\frac{\pi}{2}}$, so
-\begin{align}
-	\tan^{-1}\brak{-1} = -\frac{\pi}{4}
-	\implies \sin\brak{-\frac{\pi}{4}} = -\frac{1}{\sqrt{2}}
-\end{align}
-
-\item 
-(a) Differentiate $x^x$ with respect to $x\log x$.
-
-OR
-
-(b) If $y = P\cos ux + Q\sin ux$, show that $\diff{^2y}{x^2} + u^2y = 0$.
-\par\solution
-(a) Let $p = x^x$ and $q = x\log x$ for $x > 0$. Then $\log p = x\log x = q$, and from \eqref{eq:EE26BTECH11202-logdiff},
-\begin{align}
-	\diff{p}{x} &= x^x\brak{1+\log x}, \quad \diff{q}{x} = 1 + \log x
-	\\
-	\implies \diff{p}{q} &= \frac{dp/dx}{dq/dx} = x^x
-\end{align}
-(b) Differentiating twice,
-\begin{align}
-	\diff{y}{x} &= -Pu\sin ux + Qu\cos ux
-	\\
-	\diff{^2y}{x^2} &= -Pu^2\cos ux - Qu^2\sin ux = -u^2 y
-	\\
-	\implies \diff{^2y}{x^2} + u^2y &= 0
-\end{align}
-
-
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=23]
 \item Determine the values of $x$ for which $f\brak{x} = \dfrac{x-3}{x+1}$, $x \ne -1$, is an increasing function.
 \par\solution
 \begin{align}
@@ -470,7 +495,7 @@ OR
 
 (b) If $\vec{A}, \vec{B}, \vec{C}$ are non-collinear points with $\vec{AB} = \myvec{1 \\ 2 \\ -1}$ and $\vec{AC} = \myvec{2 \\ -3 \\ 0}$, find the area of $\triangle ABC$.
 \par\solution
-(a) From \eqref{eq:EE26BTECH11202-ortho},
+(a) From \eqref{eq:EE26BTECH11226-ortho},
 \begin{align}
 	\brak{\vec{a}+\lambda\vec{b}}^{\top}\vec{c} = \vec{a}^{\top}\vec{c} + \lambda\vec{b}^{\top}\vec{c} = 8 - 4\lambda = 0
 	\implies \lambda = 2
@@ -491,7 +516,7 @@ The following code Verifies the answer.
 	\vec{AB}\times\vec{AC} = \myvec{\brak{2}\brak{0}-\brak{-1}\brak{-3} \\ \brak{-1}\brak{2}-\brak{1}\brak{0} \\ \brak{1}\brak{-3}-\brak{2}\brak{2}}
 	= \myvec{-3 \\ -2 \\ -7}
 \end{align}
-From \eqref{eq:EE26BTECH11202-area},
+From \eqref{eq:EE26BTECH11226-area},
 \begin{align}
 	\text{Area} = \frac{1}{2}\sqrt{9+4+49} = \frac{\sqrt{62}}{2} \text{ sq. units}
 \end{align}
@@ -523,7 +548,7 @@ Since $\frac{1-z}{-6} = \frac{z-1}{6}$ and $\frac{6-z}{-2} = \frac{z-6}{2}$, the
 	\vec{m}_1 = \myvec{3 \\ 2 \\ 6}, \quad \vec{m}_2 = \myvec{1 \\ 2 \\ 2},
 	\quad \norm{\vec{m}_1} = 7, \; \norm{\vec{m}_2} = 3
 \end{align}
-From \eqref{eq:EE26BTECH11202-angle},
+From \eqref{eq:EE26BTECH11226-angle},
 \begin{align}
 	\cos\theta = \frac{3 + 4 + 12}{7 \cdot 3} = \frac{19}{21}
 	\implies \theta = \cos^{-1}\brak{\frac{19}{21}} \approx 25.2\degree
@@ -537,71 +562,49 @@ The following code verifies this.
 \vspace{2mm}
 \noindent Section C (Questions 26--31, 3 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=26]
-\item A spherical balloon loses its volume due to escape of air in such a way that the decrease of volume at any instant is proportional to its surface area. Show that the radius is decreasing at a constant rate.
-\par\solution
-Let $V = \frac{4}{3}\pi r^3$ and $S = 4\pi r^2$. For some constant $k > 0$,
-\begin{align}
-	\diff{V}{t} = -kS
-	\implies 4\pi r^2\diff{r}{t} = -k\brak{4\pi r^2}
-	\implies \diff{r}{t} = -k
-\end{align}
-which is a constant. Hence the radius decreases at a constant rate $k$.
 
-\item 
-(a) Find $\displaystyle\int\frac{x-\sin x}{1-\cos x}\,dx$.
 
-OR
 
-(b) Evaluate $\displaystyle\int_0^2\frac{1}{\sqrt{x^2+2x+3}}\,dx$.
-\par\solution
-(a) Using $1 - \cos x = 2\sin^2\frac{x}{2}$ and $\sin x = 2\sin\frac{x}{2}\cos\frac{x}{2}$,
-\begin{align}
-	\frac{x-\sin x}{1-\cos x} = \frac{x}{2}\text{cosec}^2\frac{x}{2} - \cot\frac{x}{2}
-\end{align}
-Integrating the first term by parts, with $u = x$ and $dv = \frac{1}{2}\text{cosec}^2\frac{x}{2}\,dx$,
-\begin{align}
-	\int\frac{x}{2}\text{cosec}^2\frac{x}{2}\,dx = -x\cot\frac{x}{2} + \int\cot\frac{x}{2}\,dx
-\end{align}
-The $\int\cot\frac{x}{2}\,dx$ terms cancel, so
-\begin{align}
-	\int\frac{x-\sin x}{1-\cos x}\,dx = -x\cot\frac{x}{2} + C
-\end{align}
-(b) Since $x^2+2x+3 = \brak{x+1}^2 + 2$, from \eqref{eq:EE26BTECH11202-int-root} with $a = \sqrt{2}$,
-\begin{align}
-	\int_0^2\frac{dx}{\sqrt{\brak{x+1}^2+2}}
-	&= \sbrak{\log\abs{\brak{x+1}+\sqrt{x^2+2x+3}}}_0^2
-	\\
-	&= \log\brak{3+\sqrt{11}} - \log\brak{1+\sqrt{3}} = \log\frac{3+\sqrt{11}}{1+\sqrt{3}}
-\end{align}
+
 
 \item Solve the differential equation $\brak{x + 2y^3}\,dy = y\,dx$.
 \par\solution
-Multiplying by $y$, the equation becomes $y\diff{x}{y} - x = 2y^3$. Treat $y$ as the time variable and let $x\brak{y} \system{L} X\brak{s}$. Using
+Rewriting the equation by dividing through by $y^2\,dy$,
 \begin{align}
-	\diff{x}{y} \system{L} sX - x\brak{0}, \quad
-	y f\brak{y} \system{L} -\diff{F}{s}, \quad
-	y^n \system{L} \frac{n!}{s^{n+1}}
+	\frac{y\diff{x}{y} - x}{y^2} = 2y \implies \diff{}{y}\brak{\frac{x}{y}} = 2y
 \end{align}
-we get
+Let $w\brak{y} = \frac{x}{y}$ for $y > 0$, so that
 \begin{align}
-	y\diff{x}{y} \system{L} -\diff{}{s}\brak{sX - x\brak{0}} = -X - sX^{\prime}, \quad
-	2y^3 \system{L} \frac{12}{s^4}
+	\diff{w}{y} = 2y
 \end{align}
-Hence
+Multiplying by the unit step $u\brak{y}$ and taking the Laplace transform with $w\brak{y}u\brak{y} \system{L} W\brak{s}$ and $y\,u\brak{y} \system{L} \frac{1}{s^2}$,
 \begin{align}
-	-X - sX^{\prime} - X = \frac{12}{s^4}
-	\implies X^{\prime} + \frac{2}{s}X = -\frac{12}{s^5}
+	sW\brak{s} - w\brak{0} = \frac{2}{s^2}
+	\implies W\brak{s} = \frac{2}{s^3} + \frac{w\brak{0}}{s}
 \end{align}
-This is linear in $s$ with integrating factor $s^2$,
+Using $y^2u\brak{y} \system{L} \frac{2}{s^3}$ and $u\brak{y} \system{L} \frac{1}{s}$ and taking the inverse Laplace transform,
 \begin{align}
-	\diff{}{s}\brak{s^2X} = -\frac{12}{s^3}
-	\implies s^2X = \frac{6}{s^2} + C
-	\implies X\brak{s} = \frac{6}{s^4} + \frac{C}{s^2}
+	w\brak{y} = \brak{y^2 + w\brak{0}}u\brak{y}
 \end{align}
-Taking the inverse Laplace transform,
+Since $u\brak{y} = 1$ for $y > 0$, with $C = w\brak{0}$,
 \begin{align}
-	x = y^3 + Cy
+	\frac{x}{y} = y^2 + C \implies x = y^3 + Cy
 \end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \item 
 (a) Three toys $A$, $B$ and $C$ are placed on a straight line. If their position vectors are $\myvec{55 \\ -2}$, $\myvec{5 \\ 8}$ and $\myvec{a \\ -52}$ respectively, find $a$.
@@ -610,12 +613,30 @@ OR
 
 (b) If $\vec{a}, \vec{b}, \vec{c}$ are unit vectors, prove that $\norm{\vec{a}-\vec{b}}^2 + \norm{\vec{b}-\vec{c}}^2 + \norm{\vec{c}-\vec{a}}^2 \le 9$.
 \par\solution
-(a) From \eqref{eq:EE26BTECH11202-collinear},
+(a) From \eqref{eq:EE26BTECH11226-collinear}, the points are collinear if and only if the columns of $\myvec{\vec{B}-\vec{A} & \vec{C}-\vec{A}}$ are linearly dependent, i.e.,
+$\vec{C}-\vec{A}=k\brak{\vec{B}-\vec{A}}$ for some scalar $k$. Here
 \begin{align}
-	\mydet{\vec{B}-\vec{A} & \vec{C}-\vec{A}} = \mydet{-50 & a-55 \\ 10 & -50}
-	= 2500 - 10\brak{a-55} = 0 \implies a = 305
+    \vec{B}-\vec{A} = \myvec{-50 \\ 10}, \qquad
+    \vec{C}-\vec{A} = \myvec{a-55 \\ -50}
 \end{align}
-(b) Let $s = \vec{a}^{\top}\vec{b} + \vec{b}^{\top}\vec{c} + \vec{c}^{\top}\vec{a}$. Since the vectors are unit vectors, from \eqref{eq:EE26BTECH11202-norm-id},
+Hence
+\begin{align}
+    \myvec{a-55 \\ -50} = k\myvec{-50 \\ 10}
+\end{align}
+The second row gives $10k=-50$, so
+\begin{align}
+    k = -5
+\end{align}
+Substituting $k$ in the first row,
+\begin{align}
+    a-55 = \brak{-5}\brak{-50} = 250
+    \implies a = 305
+\end{align}
+
+
+
+
+(b) Let $s = \vec{a}^{\top}\vec{b} + \vec{b}^{\top}\vec{c} + \vec{c}^{\top}\vec{a}$. Since the vectors are unit vectors, from \eqref{eq:EE26BTECH11226-norm-id},
 \begin{align}
 	\norm{\vec{a}-\vec{b}}^2 + \norm{\vec{b}-\vec{c}}^2 + \norm{\vec{c}-\vec{a}}^2 = 6 - 2s
 \end{align}
@@ -635,20 +656,28 @@ OR
 
 (b) A box contains cards numbered $1$ to $6$. Two cards are picked one by one with replacement. Let $A$ be the event that the sum of the numbers is $10$ and $B$ the event that the first card is not $4$. Find $\pr{AB}$ and state whether $A$ and $B$ are independent.
 \par\solution
-(a) Each outcome has probability $\frac{1}{6}$ and $AC = \cbrak{2,5}$, $AB = \cbrak{5}$, $\brak{A+B}C = \cbrak{2,3,5}$. From \eqref{eq:EE26BTECH11202-cond},
+(a) The sample space is $\cbrak{1,\dots,6}$ with pmf vector $\vec{p} = \frac{1}{6}\vec{1}$ and the events have indicator vectors
 \begin{align}
-	\pr{A\vert C} &= \frac{2/6}{4/6} = \frac{1}{2}, \quad
-	\pr{C\vert A} = \frac{2/6}{3/6} = \frac{2}{3}
-	\\
-	\pr{AB\vert C} &= \frac{1/6}{4/6} = \frac{1}{4}, \quad
-	\pr{A+B\vert C} = \frac{3/6}{4/6} = \frac{3}{4}
+	\vec{a} = \myvec{1 & 1 & 0 & 0 & 1 & 0}^{\top}, \quad
+	\vec{b} = \myvec{0 & 0 & 1 & 0 & 1 & 0}^{\top}, \quad
+	\vec{c} = \myvec{0 & 1 & 1 & 1 & 1 & 0}^{\top}
 \end{align}
-(b) There are $36$ equally likely outcomes. $A = \cbrak{\brak{4,6},\brak{5,5},\brak{6,4}}$ and $AB = \cbrak{\brak{5,5},\brak{6,4}}$, while $B$ has $5 \times 6 = 30$ outcomes. So
+From \eqref{eq:EE26BTECH11226-pmf-vec},
 \begin{align}
-	\pr{A} = \frac{1}{12}, \quad \pr{B} = \frac{5}{6}, \quad \pr{AB} = \frac{2}{36} = \frac{1}{18}
+	\pr{A} &= \vec{p}^{\top}\vec{a} = \frac{3}{6}, \quad \pr{C} = \vec{p}^{\top}\vec{c} = \frac{4}{6}, \quad
+	\pr{AC} = \vec{p}^{\top}\brak{\vec{a}\circ\vec{c}} = \frac{2}{6}
+	\\
+	\pr{ABC} &= \vec{p}^{\top}\brak{\vec{a}\circ\vec{b}\circ\vec{c}} = \frac{1}{6}, \quad
+	\pr{\brak{A+B}C} = \vec{p}^{\top}\brak{\brak{\vec{a}+\vec{b}-\vec{a}\circ\vec{b}}\circ\vec{c}} = \frac{3}{6}
+\end{align}
+so $\pr{A\vert C} = \frac{2/6}{4/6} = \frac{1}{2}$, $\pr{C\vert A} = \frac{2/6}{3/6} = \frac{2}{3}$, $\pr{AB\vert C} = \frac{1/6}{4/6} = \frac{1}{4}$ and $\pr{A+B\vert C} = \frac{3/6}{4/6} = \frac{3}{4}$.
+
+(b) The draws are independent and uniform, so from \eqref{eq:EE26BTECH11226-pmf-joint} the joint pmf is $\vec{P} = \frac{1}{36}\vec{1}\vec{1}^{\top}$, i.e., every cell $\brak{i,j}$ has probability $\frac{1}{36}$. $A$ is the $3$ cells $\brak{4,6},\brak{5,5},\brak{6,4}$, $B$ is the $30$ cells with $i \ne 4$, and $AB$ is the $2$ cells $\brak{5,5},\brak{6,4}$. So
+\begin{align}
+	\pr{A} = \frac{3}{36} = \frac{1}{12}, \quad \pr{B} = \frac{30}{36} = \frac{5}{6}, \quad \pr{AB} = \frac{2}{36} = \frac{1}{18}
 \end{align}
 Now $\pr{A}\pr{B} = \frac{5}{72} \ne \frac{4}{72} = \pr{AB}$, so $A$ and $B$ are not independent.
-The following code verifies this and Problems~18 and 37.
+The following code verifies this and Problems~16 and 36.
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Prob.py}@*)
 \end{lstlisting}
@@ -673,7 +702,7 @@ The cofactors are $C_{11}=0$, $C_{12}=30$, $C_{13}=-20$, $C_{21}=-5$, $C_{22}=0$
 \begin{align}
 	\text{adj}\,\vec{A} = \myvec{0 & -5 & 10 \\ 30 & 0 & -20 \\ -20 & 10 & 10}
 \end{align}
-From \eqref{eq:EE26BTECH11202-adj} and \eqref{eq:EE26BTECH11202-linsys},
+From \eqref{eq:EE26BTECH11226-adj} and \eqref{eq:EE26BTECH11226-linsys},
 \begin{align}
 	\vec{x} = \frac{1}{50}\myvec{0 & -5 & 10 \\ 30 & 0 & -20 \\ -20 & 10 & 10}\myvec{60 \\ 90 \\ 70}
 	= \frac{1}{50}\myvec{250 \\ 400 \\ 400} = \myvec{5 \\ 8 \\ 8}
@@ -684,31 +713,15 @@ The following code verifies this.
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Fruits.py}@*)
 \end{lstlisting}
 
-\item 
-(a) If $y\sqrt{x^2+1} = \log\brak{\sqrt{x^2+1}-x}$, show that $\brak{x^2+1}\diff{y}{x} + xy + 1 = 0$.
-
-OR
-
-(b) Find the derivative of $x^{\cot x} + \dfrac{2x^2-3}{2x^2-x+2}$ with respect to $x$.
+\item If $y\sqrt{x^2+1} = \log\brak{\sqrt{x^2+1}-x}$, show that $\brak{x^2+1}\diff{y}{x} + xy + 1 = 0$.
 \par\solution
-(a) Let $s = \sqrt{x^2+1}$, so $\diff{s}{x} = \frac{x}{s}$. Differentiating $ys = \log\brak{s-x}$,
+Let $s = \sqrt{x^2+1}$, so $\diff{s}{x} = \frac{x}{s}$. Differentiating $ys = \log\brak{s-x}$,
 \begin{align}
 	s\diff{y}{x} + \frac{xy}{s} = \frac{1}{s-x}\brak{\frac{x}{s} - 1} = \frac{1}{s-x}\cdot\frac{x-s}{s} = -\frac{1}{s}
 \end{align}
 Multiplying by $s$ and using $s^2 = x^2+1$,
 \begin{align}
 	\brak{x^2+1}\diff{y}{x} + xy + 1 = 0
-\end{align}
-(b) Let $u = x^{\cot x}$ and $v = \frac{2x^2-3}{2x^2-x+2}$. From \eqref{eq:EE26BTECH11202-logdiff},
-\begin{align}
-	\diff{u}{x} &= x^{\cot x}\diff{}{x}\brak{\cot x\log x} = x^{\cot x}\brak{\frac{\cot x}{x} - \text{cosec}^2 x\log x}
-	\\
-	\diff{v}{x} &= \frac{4x\brak{2x^2-x+2} - \brak{2x^2-3}\brak{4x-1}}{\brak{2x^2-x+2}^2}
-	= \frac{-2x^2+20x-3}{\brak{2x^2-x+2}^2}
-\end{align}
-Hence
-\begin{align}
-	\diff{}{x}\brak{u+v} = x^{\cot x}\brak{\frac{\cot x}{x} - \text{cosec}^2 x\log x} + \frac{-2x^2+20x-3}{\brak{2x^2-x+2}^2}
 \end{align}
 
 \item Sketch the curve $\cbrak{\brak{x,y}: 100x^2 + 25y^2 = 2500}$ and find the area of the region enclosed by it using integration.
@@ -717,18 +730,18 @@ The curve is $\vec{x}^{\top}\vec{V}\vec{x} = c$ with
 \begin{align}
 	\vec{V} = \myvec{100 & 0 \\ 0 & 25}, \quad c = 2500
 \end{align}
-The eigenvalues of $\vec{V}$ are $100$ and $25$, so from \eqref{eq:EE26BTECH11202-ellipse} it is the ellipse
+The eigenvalues of $\vec{V}$ are $100$ and $25$, so from \eqref{eq:EE26BTECH11226-ellipse} it is the ellipse
 \begin{align}
 	\frac{x^2}{25} + \frac{y^2}{100} = 1
 \end{align}
-with semi-axes $5$ along the $x$-axis and $10$ along the $y$-axis, symmetric about both axes (\figref{fig:EE26BTECH11202-2}). In the first quadrant $y = 2\sqrt{25-x^2}$, so by symmetry
+with semi-axes $5$ along the $x$-axis and $10$ along the $y$-axis, symmetric about both axes (\figref{fig:EE26BTECH11226-2}). In the first quadrant $y = 2\sqrt{25-x^2}$, so by symmetry
 \begin{align}
 	\text{Area} &= 4\int_0^5 2\sqrt{25-x^2}\,dx = 8\sbrak{\frac{x}{2}\sqrt{25-x^2} + \frac{25}{2}\sin^{-1}\frac{x}{5}}_0^5
 	\\
 	&= 8\cdot\frac{25}{2}\cdot\frac{\pi}{2} = 50\pi \text{ sq. units}
 \end{align}
-which agrees with $\frac{\pi c}{\sqrt{\mydet{\vec{V}}}} = \frac{2500\pi}{50} = 50\pi$ from \eqref{eq:EE26BTECH11202-ellipse}.
-The following code computes the area and generates \figref{fig:EE26BTECH11202-2}.
+which agrees with $\frac{\pi c}{\sqrt{\mydet{\vec{V}}}} = \frac{2500\pi}{50} = 50\pi$ from \eqref{eq:EE26BTECH11226-ellipse}.
+The following code computes the area and generates \figref{fig:EE26BTECH11226-2}.
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Ellipse.py}@*)
 \end{lstlisting}
@@ -736,7 +749,7 @@ The following code computes the area and generates \figref{fig:EE26BTECH11202-2}
 	\centering
 	\includegraphics[width=0.5\linewidth]{figs/Ellipse.png}
 	\caption{$100x^2+25y^2=2500$}
-	\label{fig:EE26BTECH11202-2}
+	\label{fig:EE26BTECH11226-2}
 \end{figure}
 
 \item 
@@ -750,7 +763,7 @@ OR
 \begin{align}
 	\vec{x} = \vec{P}_0 + \lambda\vec{m}, \quad \vec{P}_0 = \myvec{-3 \\ 1 \\ -4}, \; \vec{m} = \myvec{5 \\ 2 \\ 3}
 \end{align}
-From \eqref{eq:EE26BTECH11202-foot},
+From \eqref{eq:EE26BTECH11226-foot},
 \begin{align}
 	\lambda_0 = \frac{\myvec{5 & 2 & 3}\myvec{3 \\ 1 \\ 7}}{\myvec{5 & 2 & 3}\myvec{5 \\ 2 \\ 3}} = \frac{38}{38} = 1
 	\implies \vec{F} = \vec{P}_0 + \vec{m} = \myvec{2 \\ 3 \\ -1}
@@ -764,7 +777,7 @@ The length of the perpendicular is
 	\vec{m}_1\times\vec{m}_2 = \myvec{\brak{-1}\brak{2}-\brak{1}\brak{1} \\ \brak{1}\brak{2}-\brak{1}\brak{2} \\ \brak{1}\brak{1}-\brak{-1}\brak{2}} = \myvec{-3 \\ 0 \\ 3},
 	\quad \norm{\vec{m}_1\times\vec{m}_2} = 3\sqrt{2}
 \end{align}
-With $\vec{A}_2-\vec{A}_1 = \myvec{p-1 \\ -3 \\ -2}$, from \eqref{eq:EE26BTECH11202-skew},
+With $\vec{A}_2-\vec{A}_1 = \myvec{p-1 \\ -3 \\ -2}$, from \eqref{eq:EE26BTECH11226-skew},
 \begin{align}
 	d = \frac{\abs{-3\brak{p-1} - 6}}{3\sqrt{2}} = \frac{\abs{p+1}}{\sqrt{2}} = \frac{3}{\sqrt{2}}
 	\implies p + 1 = \pm 3 \implies p = 2 \text{ or } -4
@@ -772,7 +785,7 @@ With $\vec{A}_2-\vec{A}_1 = \myvec{p-1 \\ -3 \\ -2}$, from \eqref{eq:EE26BTECH11
 \end{enumerate}
 
 \vspace{2mm}
-\noindentSection E (Questions 36--38, 4 marks each)
+\noindent Section E (Questions 36--38, 4 marks each)
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=36]
 
 
@@ -787,65 +800,33 @@ With $\vec{A}_2-\vec{A}_1 = \myvec{p-1 \\ -3 \\ -2}$, from \eqref{eq:EE26BTECH11
 	(b) the person was given vaccine $A_3$, given that the randomly chosen person is not infected. \hfill [2]
 \end{enumerate}
 \par\solution
-Let $E$ be the event that the person is protected, and
+Let $E$ be the event that the person is protected and $E^{\prime}$ that the person is infected. Let
 \begin{align}
 	\vec{p} = \myvec{0.25 \\ 0.35 \\ 0.40}, \quad \vec{q} = \myvec{0.60 \\ 0.55 \\ 0.50}
 \end{align}
-with $p_i = \pr{A_i}$ and $q_i = \pr{E\vert A_i}$.
+with $p_i = \pr{A_i}$ and $q_i = \pr{E\vert A_i}$. The joint pmf matrix of the vaccine (rows $A_1, A_2, A_3$) and the outcome (columns $E, E^{\prime}$) is $P_{i1} = p_i q_i$, $P_{i2} = p_i\brak{1-q_i}$,
+\begin{align}
+	\vec{P} = \myvec{0.25\times 0.60 & 0.25\times 0.40 \\ 0.35\times 0.55 & 0.35\times 0.45 \\ 0.40\times 0.50 & 0.40\times 0.50}
+	= \myvec{0.15 & 0.10 \\ 0.1925 & 0.1575 \\ 0.20 & 0.20}
+\end{align}
+From \eqref{eq:EE26BTECH11226-pmf-joint}, the pmf of the vaccine is $\vec{P}\vec{1} = \vec{p}$, and the pmf of the outcome is
+\begin{align}
+	\vec{P}^{\top}\vec{1} = \myvec{0.5425 \\ 0.4575}
+\end{align}
 \begin{enumerate}[label=(\roman*)]
-	\item $\pr{E^{\prime}\vert A_2} = 1 - q_2 = 0.45 = \frac{9}{20}$.
-	\item From \eqref{eq:EE26BTECH11202-total},
-	\begin{align}
-		\pr{E} = \vec{p}^{\top}\vec{q} = 0.15 + 0.1925 + 0.20 = 0.5425 = \frac{217}{400}
-	\end{align}
-	\item Here $\pr{E^{\prime}} = 1 - \frac{217}{400} = \frac{183}{400}$. From \eqref{eq:EE26BTECH11202-bayes},
-	
+	\item $\pr{E^{\prime}\vert A_2} = \dfrac{P_{22}}{\brak{\vec{P}\vec{1}}_2} = \dfrac{0.1575}{0.35} = 0.45 = \dfrac{9}{20}$.
+	\item $\pr{E} = \brak{\vec{P}^{\top}\vec{1}}_1 = 0.15 + 0.1925 + 0.20 = 0.5425 = \dfrac{217}{400}$.
+	\item Here $\pr{E^{\prime}} = \brak{\vec{P}^{\top}\vec{1}}_2 = 0.4575 = \dfrac{183}{400}$.
+
 	(a)
 	\begin{align}
-		\pr{A_1\vert E^{\prime}} = \frac{p_1\brak{1-q_1}}{\pr{E^{\prime}}} = \frac{0.25 \times 0.40}{0.4575} = \frac{40}{183} \approx 0.219
+		\pr{A_1\vert E^{\prime}} = \frac{P_{12}}{\brak{\vec{P}^{\top}\vec{1}}_2} = \frac{0.10}{0.4575} = \frac{40}{183} \approx 0.219
 	\end{align}
 	(b)
 	\begin{align}
-		\pr{A_3\vert E} = \frac{p_3 q_3}{\vec{p}^{\top}\vec{q}} = \frac{0.40\times 0.50}{0.5425} = \frac{80}{217} \approx 0.369
+		\pr{A_3\vert E} = \frac{P_{31}}{\brak{\vec{P}^{\top}\vec{1}}_1} = \frac{0.20}{0.5425} = \frac{80}{217} \approx 0.369
 	\end{align}
 \end{enumerate}
 
-\item Case Study 3. A company produces cylindrical tumblers, open at the top, of fixed surface area. For a tumbler of volume $V$, height $h$ and base radius $r$ (\figref{fig:EE26BTECH11202-3}),
-\begin{enumerate}[label=(\roman*)]
-	\item differentiate $V$ with respect to $r$ when the surface area is constant. \hfill [2]
-	\item if the volume is to be maximised, establish a relation between $h$ and $r$. \hfill [2]
-\end{enumerate}
-\begin{figure}[H]
-	\centering
-	\input{figs/Tumbler.tex}
-	\caption{Open cylindrical tumbler}
-	\label{fig:EE26BTECH11202-3}
-\end{figure}
-\par\solution
-\begin{enumerate}[label=(\roman*)]
-	\item The surface area (curved surface and base) is a constant $S$:
-	\begin{align}
-		S = \pi r^2 + 2\pi rh \implies h = \frac{S-\pi r^2}{2\pi r}
-		\implies V = \pi r^2 h = \frac{Sr - \pi r^3}{2}
-	\end{align}
-	\begin{align}
-		\diff{V}{r} = \frac{S - 3\pi r^2}{2} = \pi r\brak{h-r}
-	\end{align}
-	where the last step substitutes $S = \pi r^2 + 2\pi rh$.
-	\item Setting $\diff{V}{r} = 0$ gives $h = r$ (equivalently $S = 3\pi r^2$). Also
-	\begin{align}
-		\diff{^2V}{r^2} = -3\pi r < 0
-	\end{align}
-	so $V$ is maximum when $\boxed{h = r}$. \figref{fig:EE26BTECH11202-4} shows $V$ against $r$ for $S = 3\pi$, with the maximum at $r = h = 1$.
-	The following code verifies this and generates \figref{fig:EE26BTECH11202-4}.
-\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Tumbler.py}@*)
-\end{lstlisting}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\linewidth]{figs/Tumbler_V.png}
-	\caption{$V$ vs $r$ for $S = 3\pi$}
-	\label{fig:EE26BTECH11202-4}
-\end{figure}
-\end{enumerate}
+
 \end{enumerate}
