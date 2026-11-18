@@ -231,6 +231,9 @@ Option (B). The following figure verifies this.
 	\centering
 	\includegraphics[width=0.9\linewidth]{figs/Triangle.png}
 \end{figure}
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.7.py}@*)
+\end{lstlisting}
 
 
 
@@ -289,7 +292,9 @@ $f\brak{2} = 5$. Option (C). The following plot verifies the answer.
 	\includegraphics[width=0.9\linewidth]{figs/1.2.9.png}
 \end{figure}
 
-
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.9.py}@*)
+\end{lstlisting}
 
 
 
@@ -713,16 +718,6 @@ The following code verifies this.
 (*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Fruits.py}@*)
 \end{lstlisting}
 
-\item If $y\sqrt{x^2+1} = \log\brak{\sqrt{x^2+1}-x}$, show that $\brak{x^2+1}\diff{y}{x} + xy + 1 = 0$.
-\par\solution
-Let $s = \sqrt{x^2+1}$, so $\diff{s}{x} = \frac{x}{s}$. Differentiating $ys = \log\brak{s-x}$,
-\begin{align}
-	s\diff{y}{x} + \frac{xy}{s} = \frac{1}{s-x}\brak{\frac{x}{s} - 1} = \frac{1}{s-x}\cdot\frac{x-s}{s} = -\frac{1}{s}
-\end{align}
-Multiplying by $s$ and using $s^2 = x^2+1$,
-\begin{align}
-	\brak{x^2+1}\diff{y}{x} + xy + 1 = 0
-\end{align}
 
 \item Sketch the curve $\cbrak{\brak{x,y}: 100x^2 + 25y^2 = 2500}$ and find the area of the region enclosed by it using integration.
 \par\solution
@@ -785,48 +780,6 @@ With $\vec{A}_2-\vec{A}_1 = \myvec{p-1 \\ -3 \\ -2}$, from \eqref{eq:EE26BTECH11
 \end{enumerate}
 
 \vspace{2mm}
-\noindent Section E (Questions 36--38, 4 marks each)
-\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi, start=36]
 
 
-\item Case Study 2. Three vaccines $A_1, A_2, A_3$ were given to $25\%$, $35\%$ and $40\%$ of the population respectively. They protect against the infection with probabilities $60\%$, $55\%$ and $50\%$ respectively. Find the probability that
-\begin{enumerate}[label=(\roman*)]
-	\item a person taking vaccine $A_2$ gets infected. \hfill [1]
-	\item a randomly chosen person is protected from the infection. \hfill [1]
-	\item (a) the person was given vaccine $A_1$, given that the randomly chosen person is infected. \hfill [2]
 
-	OR
-
-	(b) the person was given vaccine $A_3$, given that the randomly chosen person is not infected. \hfill [2]
-\end{enumerate}
-\par\solution
-Let $E$ be the event that the person is protected and $E^{\prime}$ that the person is infected. Let
-\begin{align}
-	\vec{p} = \myvec{0.25 \\ 0.35 \\ 0.40}, \quad \vec{q} = \myvec{0.60 \\ 0.55 \\ 0.50}
-\end{align}
-with $p_i = \pr{A_i}$ and $q_i = \pr{E\vert A_i}$. The joint pmf matrix of the vaccine (rows $A_1, A_2, A_3$) and the outcome (columns $E, E^{\prime}$) is $P_{i1} = p_i q_i$, $P_{i2} = p_i\brak{1-q_i}$,
-\begin{align}
-	\vec{P} = \myvec{0.25\times 0.60 & 0.25\times 0.40 \\ 0.35\times 0.55 & 0.35\times 0.45 \\ 0.40\times 0.50 & 0.40\times 0.50}
-	= \myvec{0.15 & 0.10 \\ 0.1925 & 0.1575 \\ 0.20 & 0.20}
-\end{align}
-From \eqref{eq:EE26BTECH11226-pmf-joint}, the pmf of the vaccine is $\vec{P}\vec{1} = \vec{p}$, and the pmf of the outcome is
-\begin{align}
-	\vec{P}^{\top}\vec{1} = \myvec{0.5425 \\ 0.4575}
-\end{align}
-\begin{enumerate}[label=(\roman*)]
-	\item $\pr{E^{\prime}\vert A_2} = \dfrac{P_{22}}{\brak{\vec{P}\vec{1}}_2} = \dfrac{0.1575}{0.35} = 0.45 = \dfrac{9}{20}$.
-	\item $\pr{E} = \brak{\vec{P}^{\top}\vec{1}}_1 = 0.15 + 0.1925 + 0.20 = 0.5425 = \dfrac{217}{400}$.
-	\item Here $\pr{E^{\prime}} = \brak{\vec{P}^{\top}\vec{1}}_2 = 0.4575 = \dfrac{183}{400}$.
-
-	(a)
-	\begin{align}
-		\pr{A_1\vert E^{\prime}} = \frac{P_{12}}{\brak{\vec{P}^{\top}\vec{1}}_2} = \frac{0.10}{0.4575} = \frac{40}{183} \approx 0.219
-	\end{align}
-	(b)
-	\begin{align}
-		\pr{A_3\vert E} = \frac{P_{31}}{\brak{\vec{P}^{\top}\vec{1}}_1} = \frac{0.20}{0.5425} = \frac{80}{217} \approx 0.369
-	\end{align}
-\end{enumerate}
-
-
-\end{enumerate}

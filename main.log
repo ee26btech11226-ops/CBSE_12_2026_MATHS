@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  16 NOV 2026 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  18 NOV 2026 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1566,96 +1566,95 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.8.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.252 \end{align}
+l.255 \end{align}
                   [11 <./figs/Triangle.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.283 \end{align}
+l.286 \end{align}
                  
-<figs/1.2.9.png, id=241, 578.16pt x 433.62pt>
+<figs/1.2.9.png, id=240, 499.1448pt x 396.5214pt>
 File: figs/1.2.9.png Graphic file (type png)
 <use figs/1.2.9.png>
-Package pdftex.def Info: figs/1.2.9.png  used on input line 289.
-(pdftex.def)             Requested size: 327.77354pt x 245.82944pt.
+Package pdftex.def Info: figs/1.2.9.png  used on input line 292.
+(pdftex.def)             Requested size: 327.77354pt x 260.39198pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.312 \end{align}
-                 
+l.317 \end{align}
+                  [12 <./figs/1.2.9.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.318 \end{align}
-                  [12 <./figs/1.2.9.png>]
+l.323 \end{align}
+                 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.12.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.351 \end{align}
+l.356 \end{align}
                  
-<figs/Ant.pdf, id=257, 433.62pt x 361.35pt>
+<figs/Ant.pdf, id=261, 433.62pt x 361.35pt>
 File: figs/Ant.pdf Graphic file (type pdf)
 <use figs/Ant.pdf>
-Package pdftex.def Info: figs/Ant.pdf  used on input line 362.
+Package pdftex.def Info: figs/Ant.pdf  used on input line 367.
 (pdftex.def)             Requested size: 218.5194pt x 182.10262pt.
- [13 <./figs/Ant.pdf>]
+ [13] [14 <./figs/Ant.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.414 \end{align}
+l.419 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.430 \end{align}
-                  [14]
+l.435 \end{align}
+                 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.448 \end{align}
-                 
-<figs/1.2.23.png, id=351, 578.16pt x 433.62pt>
+l.453 \end{align}
+                  [15]
+<figs/1.2.23.png, id=366, 578.16pt x 433.62pt>
 File: figs/1.2.23.png Graphic file (type png)
 <use figs/1.2.23.png>
-Package pdftex.def Info: figs/1.2.23.png  used on input line 479.
+Package pdftex.def Info: figs/1.2.23.png  used on input line 484.
 (pdftex.def)             Requested size: 218.5194pt x 163.88408pt.
- [15 <./figs/1.2.23.png>]
-<figs/1.2.24.png, id=370, 578.16pt x 433.62pt>
+<figs/1.2.24.png, id=369, 578.16pt x 433.62pt>
 File: figs/1.2.24.png Graphic file (type png)
 <use figs/1.2.24.png>
-Package pdftex.def Info: figs/1.2.24.png  used on input line 531.
+Package pdftex.def Info: figs/1.2.24.png  used on input line 536.
 (pdftex.def)             Requested size: 218.5194pt x 163.88408pt.
- [16 <./figs/1.2.24.png>]
-Underfull \hbox (badness 1845) in paragraph at lines 579--581
+ [16 <./figs/1.2.23.png>]
+Underfull \hbox (badness 1845) in paragraph at lines 584--586
 \OT1/ptm/m/n/10 Multiplying by the unit step $\OML/cmm/m/it/10 u []$ \OT1/ptm/m
 /n/10 and tak-ing the Laplace trans-form with
  []
 
-[17]
-Overfull \hbox (32.86736pt too wide) detected at line 664
+[17 <./figs/1.2.24.png>] [18]
+Overfull \hbox (32.86736pt too wide) detected at line 669
 []
  []
 
 
-Overfull \hbox (8.60603pt too wide) detected at line 672
+Overfull \hbox (8.60603pt too wide) detected at line 677
 []
  []
 
-[18] [19]
-<figs/Ellipse.png, id=446, 361.35pt x 433.62pt>
+[19]
+<figs/Ellipse.png, id=444, 361.35pt x 433.62pt>
 File: figs/Ellipse.png Graphic file (type png)
 <use figs/Ellipse.png>
-Package pdftex.def Info: figs/Ellipse.png  used on input line 750.
+Package pdftex.def Info: figs/Ellipse.png  used on input line 745.
 (pdftex.def)             Requested size: 182.09764pt x 218.51653pt.
- [20] [21 <./figs/Ellipse.png>] [22]) [23] (./main.aux)
+ [20] [21 <./figs/Ellipse.png>]) [22] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1664,13 +1663,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BF5C6A660FD79632E851D9FC3A32CDD3;348.
  ) 
 Here is how much of TeX's memory you used:
- 54538 strings out of 467533
- 1306184 string characters out of 5422138
+ 54526 strings out of 467533
+ 1306080 string characters out of 5422138
  1950681 words of memory out of 5000000
  82418 multiletter control sequences out of 15000+600000
  662449 words of font info for 109 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,20n,118p,1194b,1359s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,20n,118p,1194b,1426s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
@@ -1687,10 +1686,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/tfrupee/tfrupee.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (23 pages, 1663260 bytes).
+Output written on main.pdf (22 pages, 1584211 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
- 500 compressed objects within 5 object streams
- 265 named destinations out of 1000 (max. 500000)
+ 608 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
+ 253 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
