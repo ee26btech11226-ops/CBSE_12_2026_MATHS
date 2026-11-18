@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  18 NOV 2026 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.1)  18 NOV 2026 20:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1616,43 +1616,38 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.15.1
                    \relax 
 l.435 \end{align}
                  
-pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.453 \end{align}
-                  [15]
-<figs/1.2.23.png, id=366, 578.16pt x 433.62pt>
+<figs/1.2.23.png, id=344, 578.16pt x 433.62pt>
 File: figs/1.2.23.png Graphic file (type png)
 <use figs/1.2.23.png>
-Package pdftex.def Info: figs/1.2.23.png  used on input line 484.
+Package pdftex.def Info: figs/1.2.23.png  used on input line 465.
 (pdftex.def)             Requested size: 218.5194pt x 163.88408pt.
-<figs/1.2.24.png, id=369, 578.16pt x 433.62pt>
+ [15]
+<figs/1.2.24.png, id=366, 578.16pt x 433.62pt>
 File: figs/1.2.24.png Graphic file (type png)
 <use figs/1.2.24.png>
-Package pdftex.def Info: figs/1.2.24.png  used on input line 536.
+Package pdftex.def Info: figs/1.2.24.png  used on input line 517.
 (pdftex.def)             Requested size: 218.5194pt x 163.88408pt.
  [16 <./figs/1.2.23.png>]
-Underfull \hbox (badness 1845) in paragraph at lines 584--586
+Underfull \hbox (badness 1845) in paragraph at lines 565--567
 \OT1/ptm/m/n/10 Multiplying by the unit step $\OML/cmm/m/it/10 u []$ \OT1/ptm/m
 /n/10 and tak-ing the Laplace trans-form with
  []
 
 [17 <./figs/1.2.24.png>] [18]
-Overfull \hbox (32.86736pt too wide) detected at line 669
+Overfull \hbox (32.86736pt too wide) detected at line 650
 []
  []
 
 
-Overfull \hbox (8.60603pt too wide) detected at line 677
+Overfull \hbox (8.60603pt too wide) detected at line 658
 []
  []
 
 [19]
-<figs/Ellipse.png, id=444, 361.35pt x 433.62pt>
+<figs/Ellipse.png, id=439, 361.35pt x 433.62pt>
 File: figs/Ellipse.png Graphic file (type png)
 <use figs/Ellipse.png>
-Package pdftex.def Info: figs/Ellipse.png  used on input line 745.
+Package pdftex.def Info: figs/Ellipse.png  used on input line 726.
 (pdftex.def)             Requested size: 182.09764pt x 218.51653pt.
  [20] [21 <./figs/Ellipse.png>]) [22] (./main.aux)
  ***********
@@ -1663,8 +1658,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BF5C6A660FD79632E851D9FC3A32CDD3;348.
  ) 
 Here is how much of TeX's memory you used:
- 54526 strings out of 467533
- 1306080 string characters out of 5422138
+ 54522 strings out of 467533
+ 1306056 string characters out of 5422138
  1950681 words of memory out of 5000000
  82418 multiletter control sequences out of 15000+600000
  662449 words of font info for 109 fonts, out of 8000000 for 9000
@@ -1686,10 +1681,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/tfrupee/tfrupee.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (22 pages, 1584211 bytes).
+Output written on main.pdf (22 pages, 1583143 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
- 253 named destinations out of 1000 (max. 500000)
+ 601 PDF objects out of 1000 (max. 8388607)
+ 476 compressed objects within 5 object streams
+ 249 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -114,7 +114,7 @@ The following code generates \figref{fig:EE26BTECH11226-6} and \figref{fig:EE26B
 Option (C).
 The following code verifies the answer
 \begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
-(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Q4.py}@*)
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.4.py}@*)
 \end{lstlisting}
 
 
@@ -433,31 +433,12 @@ The strips of the cross are perpendicular. From \eqref{eq:EE26BTECH11226-ortho},
 \begin{align}
 	\vec{a}^{\top}\vec{b} = 6 - 8 + 5\lambda = 0 \implies \lambda = \frac{2}{5}
 \end{align}
-Option (C).
+Option (C).The following code verifies the answer.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/1.2.15.py}@*)
+\end{lstlisting}
 
-\item If $3\pr{A} = \pr{B} = \dfrac{3}{5}$ and $\pr{A\vert B} = \dfrac{2}{3}$, then $\pr{A+B}$ is
-\begin{enumerate}[label=(\Alph*)]
-	\begin{multicols}{4}
-	\item $\frac{3}{5}$
-	\item $\frac{1}{5}$
-	\item $\frac{2}{15}$
-	\item $\frac{2}{5}$
-	\end{multicols}
 \end{enumerate}
-\par\solution
-Let $X, Y \in \cbrak{0,1}$ be the indicators of $A$ and $B$ with joint pmf $\vec{P} = \myvec{p_{11} & p_{12} \\ p_{21} & p_{22}}$, where $p_{11} = \pr{A^{\prime}B^{\prime}}$ and $p_{22} = \pr{AB}$, and let $\vec{e} = \myvec{0 \\ 1}$. From \eqref{eq:EE26BTECH11226-pmf-joint},
-\begin{align}
-	\vec{e}^{\top}\vec{P}\vec{1} = \frac{1}{5}, \quad
-	\vec{1}^{\top}\vec{P}\vec{e} = \frac{3}{5}, \quad
-	p_{22} = \pr{A\vert B}\,\vec{1}^{\top}\vec{P}\vec{e} = \frac{2}{5}
-\end{align}
-Since $\vec{1}^{\top}\vec{P}\vec{1} = 1$,
-\begin{align}
-	p_{11} = 1 - \frac{1}{5} - \frac{3}{5} + \frac{2}{5} = \frac{3}{5}
-	\implies \pr{A+B} = 1 - p_{11} = \frac{2}{5}
-\end{align}
-Option (D). \end{enumerate}
-
 
 
 \vspace{2mm}
